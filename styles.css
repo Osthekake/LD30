@@ -1,0 +1,8 @@
+.journal {
+
+}
+
+.clue:hover{
+	background: yellow;
+	cursor: zoom-in;
+}

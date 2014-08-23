@@ -2,10 +2,30 @@
 <!DOCTYPE html>
 <html class="no-js">
     <head>
-        
         <title>Ludum Dare 30</title>
-        <script type="text/javascript" src="GameLoop.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script type="text/javascript" src="Connections.js"></script>
+        <script type="text/javascript" src="ConnectionHelper.js"></script>
+        <script type="text/javascript" src="TextTypes.js"></script>
+        <script type="text/javascript" src="TextContent.js"></script>
+        <script type="text/javascript" src="PageHelper.js"></script>
     </head>
     <body>
+    	<div id="page" style="float:left; width: 700px;">
+    		page goes here
+    	</div>
+    	<div style="float:right;">
+	    	<canvas id="connections" width="400" height="400">
+	    		connections go here
+	    	</canvas>
+	    </div>
+
+	    <script>
+	    	var canvas = document.getElementById("connections");
+	    	var ctx = canvas.getContext("2d");
+	    	ConnectionHelper.init(ctx);
+	    	PageHelper.init(document.getElementById("page"));
+	    	PageHelper.loadPage("page1");
+	    </script>
     </body>
 </html>
