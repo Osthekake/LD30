@@ -73,6 +73,8 @@ a:visited{
 }
 .scroogle{
 	background: white;
+	padding:10;
+	margin:10;
 }
 .scroogle h3{
 	padding:0;

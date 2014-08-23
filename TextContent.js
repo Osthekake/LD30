@@ -67,7 +67,7 @@ var Pages = {
 			new StyledDiv([
 				new Image("img/mansion.jpg", 250, 200)
 			], "", "float:right;"),
-			new Paragraph([new JustText("Welcome to Beuly House")])
+			new Paragraph([new JustText("Welcome to Beuly House. The home of the Conways.")])
 		],
 		style : "mansion"
 	},
