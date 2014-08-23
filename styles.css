@@ -1,8 +1,57 @@
-.journal {
+@font-face {
+    font-family: oldlondon;
+    src: url(fonts/Olondon_.otf);
+}
+@font-face {
+    font-family: china;
+    src: url(fonts/Shojumaru-Regular.ttf);
+}
 
+.journal{
+	background: snow;
+}
+.left-box{
+	border-style: solid;
+	display: inline-block;
+	height: 300px;
+	padding: 10px;
+	background: gainsboro;
+}
+.mail {
+	background: sienna;
+	padding: 10px;
+	margin: 10px;
+}
+.mail h1{
+	font-family: oldlondon;
+}
+
+.letter {
+	padding: 10px;
+	border-style: solid;
+	width: 500;
+	float: right;
+	display: inline-block;
+	background: khaki;
+	font-family: monospace;
+}
+
+.centered{
+	text-align: center;
+}
+
+.bordered{
+	border-style: solid;
+	display: inline-block;
 }
 
 .clue:hover{
 	background: yellow;
 	cursor: zoom-in;
+}
+.mansion{
+	background: khaki;
+}
+.mansion h1{
+	font-family: 'Parisienne', cursive;
 }

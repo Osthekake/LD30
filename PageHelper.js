@@ -12,9 +12,10 @@ var PageHelper = {
 		}
 	},
 	loadPage : function(pageid){
-		historyStack.push(PageHelper.addressfield.innerHTML);
-		PageHelper.addressfield.innerHTML = pageid;
+		historyStack.push(PageHelper.addressfield.value);
+		PageHelper.addressfield.value = pageid;
 		var page = Pages[pageid];
+		document.getElementById("body").className = page.style;
 		PageHelper.container.className = page.style;
 		var current = PageHelper.container.childNodes[0];
 		if(current){
@@ -26,9 +27,11 @@ var PageHelper = {
 	},
 	back : function(){
 		var pageid = historyStack.pop();
+		console.log("going back to " + pageid);
 		if(pageid){
-			PageHelper.addressfield.innerHTML = pageid;
+			PageHelper.addressfield.value = pageid;
 			var page = Pages[pageid];
+			document.getElementById("body").className = page.style;
 			PageHelper.container.className = page.style;
 			var current = PageHelper.container.childNodes[0];
 			if(current){
