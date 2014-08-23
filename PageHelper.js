@@ -25,8 +25,17 @@ var PageHelper = {
 		
 	},
 	back : function(){
-		var h = historyStack.pop();
-		if(h)
-			PageHelper.loadPage(h);
+		var pageid = historyStack.pop();
+		if(pageid){
+			PageHelper.addressfield.innerHTML = pageid;
+			var page = Pages[pageid];
+			PageHelper.container.className = page.style;
+			var current = PageHelper.container.childNodes[0];
+			if(current){
+				PageHelper.container.removeChild(current);
+				PageHelper.container.appendChild(page.element);
+			}else
+				PageHelper.container.appendChild(page.element);
+		}
 	}
 }
