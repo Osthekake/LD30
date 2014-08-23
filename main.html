@@ -10,11 +10,18 @@
         <script type="text/javascript" src="TextContent.js"></script>
         <script type="text/javascript" src="PageHelper.js"></script>
     </head>
-    <body>
-    	<div id="page" style="float:left; width: 700px;">
-    		page goes here
-    	</div>
-    	<div style="float:right;">
+    <body style="background:black;">
+    	<div id="browser" style="float:left; width: 700px;">
+    		<div style="background:white; border-style:inset; border-width:3px; margin:10px; padding:0;">
+    			<img src="img/back.png" id="back" width="15" height="15" style="margin:0; padding:0;"></img>
+    			<span id="address" style="padding: 0 0 0 10px; margin:0;"></span>
+    		</div>
+	    	<div style="background:white; height:400px; y-overflow:scroll; border-style:inset; border-width:3px; padding:10px; margin:10px;">
+	    		<span id="page"></span>
+	    	</div>
+	    </div>
+    	<div style="float:right; border-style:inset; border-width:5px;">
+    		<button id="cycle" style="position:fixed; top:7;">Next</button>
 	    	<canvas id="connections" width="400" height="400">
 	    		connections go here
 	    	</canvas>
@@ -24,8 +31,10 @@
 	    	var canvas = document.getElementById("connections");
 	    	var ctx = canvas.getContext("2d");
 	    	ConnectionHelper.init(ctx);
-	    	PageHelper.init(document.getElementById("page"));
-	    	PageHelper.loadPage("page1");
+	    	PageHelper.init(document.getElementById("page"), document.getElementById("address"));
+	    	PageHelper.loadPage("about:game");
+	    	document.getElementById("cycle").onclick = function(){ConnectionHelper.cycleHighlight();};
+	    	document.getElementById("back").onclick = function(){PageHelper.back();};
 	    </script>
     </body>
 </html>

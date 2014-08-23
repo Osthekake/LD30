@@ -1,10 +1,4 @@
-
-var clickables = new Array(20);
-for (var i = 0; i < clickables.length; i++) {
-	clickables[i] = new Array(20);
-};
-
-var highlighted = undefined;
+var clickables = []
 
 var ConnectionHelper = {
 	init : function(ctx){
@@ -21,17 +15,23 @@ var ConnectionHelper = {
 		ConnectionHelper.render();
 	},
 	solve : function(id){
-		console.log("Solved " + id)
 		var c = Connections[id];
-		console.log(c);
 		c.solved = true;
-		highlighted = c;
+		console.log("making " + id+ " clickable");
+		clickables.push(c);
 		if(c.parent){
 			ConnectionHelper.solveIfChildrenAreSolved(c.parent);
 		}
 
 		//re-render
 		ConnectionHelper.render();
+	},
+	cycleHighlight : function() {
+		var top = clickables.shift();
+		console.log(clickables);
+		console.log(top);
+		clickables.push(top);
+		ConnectionHelper.render();	
 	},
 	solveIfChildrenAreSolved : function(parent){
 		if(parent.children){
@@ -43,14 +43,27 @@ var ConnectionHelper = {
 					return;
 				}
 			}
+			console.log("parent solved for some reason.");
 			parent.solved = true;
-			highlighted = parent;
+			clickables.push(parent);
 			if(parent.parent)
 				ConnectionHelper.solveIfChildrenAreSolved(parent.parent);	
 		}else{
 			//solve if no children?
 			parent.solved = true;
 		}
+	},
+	drawALine : function(x1, y1, x2, y2){
+		ctx.beginPath();
+		ctx.arc(x1, y1, ctx.lineWidth, 0, 2*Math.PI);
+		ctx.fill();
+		ctx.beginPath();
+		ctx.moveTo(x1, y1);
+		ctx.lineTo(x2, y2);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.arc(x2, y2, ctx.lineWidth, 0, 2*Math.PI);
+		ctx.fill();
 	},
 	render : function(){
 		var ctx = ConnectionHelper.ctx;
@@ -63,24 +76,12 @@ var ConnectionHelper = {
 				var realy1 = connection.coords[1] * 50 + 30;
 				var realx2 = connection.coords[2] * 50 + 30;
 				var realy2 = connection.coords[3] * 50 + 30;
-				var x = connection.coords[0];
-				var y = connection.coords[1];
-				clickables[x][y] = connection;
-
+				
 				ctx.fillStyle = "gray";
 				ctx.strokeStyle = "gray";
-
 				ctx.lineWidth = 10;
-				ctx.beginPath();
-				ctx.arc(realx1, realy1, 15, 0, 2*Math.PI);
-				ctx.fill();
-				ctx.beginPath();
-				ctx.moveTo(realx1, realy1);
-				ctx.lineTo(realx2, realy2);
-				ctx.stroke();
-				ctx.beginPath();
-				ctx.arc(realx2, realy2, 15, 0, 2*Math.PI);
-				ctx.fill();
+
+				ConnectionHelper.drawALine(realx1, realy1, realx2, realy2);
 			}
 		}
 		for(var cid in Connections){
@@ -90,43 +91,33 @@ var ConnectionHelper = {
 				var realy1 = connection.coords[1] * 50 + 30;
 				var realx2 = connection.coords[2] * 50 + 30;
 				var realy2 = connection.coords[3] * 50 + 30;
-				var x = connection.coords[0];
-				var y = connection.coords[1];
-				clickables[x][y] = connection;
-
-				if(connection == highlighted){
-					ctx.fillStyle = "white";
-					ctx.strokeStyle = "white";
-					ctx.lineWidth = 15;
-					ctx.beginPath();
-					ctx.arc(realx1, realy1, 15, 0, 2*Math.PI);
-					ctx.stroke();
-					ctx.beginPath();
-					ctx.moveTo(realx1, realy1);
-					ctx.lineTo(realx2, realy2);
-					ctx.stroke();
-					ctx.beginPath();
-					ctx.arc(realx2, realy2, 15, 0, 2*Math.PI);
-					ctx.stroke();
-				}
+				
 				ctx.fillStyle = "green";
 				ctx.strokeStyle = "green";
-		
 				ctx.lineWidth = 10;
-				ctx.beginPath();
-				ctx.arc(realx1, realy1, 15, 0, 2*Math.PI);
-				ctx.fill();
-				ctx.beginPath();
-				ctx.moveTo(realx1, realy1);
-				ctx.lineTo(realx2, realy2);
-				ctx.stroke();
-				ctx.beginPath();
-				ctx.arc(realx2, realy2, 15, 0, 2*Math.PI);
-				ctx.fill();
+		
+				ConnectionHelper.drawALine(realx1, realy1, realx2, realy2);
 			}
 		}
+		if(clickables[clickables.length-1]){
+			var connection = clickables[clickables.length-1];
+			var realx1 = connection.coords[0] * 50 + 30;
+			var realy1 = connection.coords[1] * 50 + 30;
+			var realx2 = connection.coords[2] * 50 + 30;
+			var realy2 = connection.coords[3] * 50 + 30;
+			
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "white";
+			ctx.lineWidth = 15;
+			ConnectionHelper.drawALine(realx1, realy1, realx2, realy2);
+
+			ctx.fillStyle = "green";
+			ctx.strokeStyle = "green";
+			ctx.lineWidth = 10;
+			ConnectionHelper.drawALine(realx1, realy1, realx2, realy2);
+		}
 		//text at the bottom
-		if(highlighted)
-			ctx.fillText(highlighted.tooltip,30,350);
+		if(clickables[clickables.length-1])
+			ctx.fillText(clickables[clickables.length-1].tooltip,30,350);
 	}
 };

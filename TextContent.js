@@ -1,4 +1,18 @@
 var Pages = {
+	"about:game" : {
+		content : [
+			new JustText("Welcome to the game!<br/>"),
+			new Link("Start", "www.letters.com")
+		],
+		style : "journal"
+	},	
+	"www.letters.com" : {
+		content : [
+			new JustText("You have mail!<br/>"),
+			new Link("Investigate murder.", "page1")
+		],
+		style : "journal"
+	},
 	"page1" : {
 		content : [
 			new JustText("This text is just a normal text."),
