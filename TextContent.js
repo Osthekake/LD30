@@ -22,4 +22,15 @@ var Pages = {
 		],
 		style : "journal"
 	}
+	"page3" : {
+		content : [
+			new JustText("Henry Conway was declared bankrupt yesterday. The business mogul, whose "),
+			new Clue("brother George ", "harolds_father_is_bankrupt"),
+			new JustText("is well-known on these pages for his "),
+			new Clue("business concerns in the Orient, ", "the_Conway_fortune_comes_from_China"),
+			new JustText("was forced to put his company into administration."),
+			new Link("?")
+		],
+		style : "??"
+	}
 }
