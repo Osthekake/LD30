@@ -3,12 +3,23 @@ var PageHelper = {
 	init : function(container, addressfield){
 		PageHelper.container = container;
 		PageHelper.addressfield = addressfield;
+		addressfield.onkeydown = PageHelper.search;
 		for(var pageId in Pages){
 			var page = Pages[pageId];
 			page.element = document.createElement('div');
 			for (var i = 0; i < page.content.length; i++) {
 				page.element.appendChild(page.content[i].asHTML());
 			};
+		}
+	},
+	search : function(event){
+		if (event.keyCode == 13){
+			var entered = PageHelper.addressfield.value;
+			console.log(entered + " was entered by user");
+			if(Pages[entered])
+				PageHelper.loadPage(entered);
+			else
+				PageHelper.loadPage("404");
 		}
 	},
 	loadPage : function(pageid){

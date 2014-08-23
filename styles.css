@@ -9,6 +9,8 @@
 
 .journal{
 	background: snow;
+	padding: 10px;
+	margin: 10px;
 }
 .left-box{
 	border-style: solid;
@@ -25,7 +27,14 @@
 .mail h1{
 	font-family: oldlondon;
 }
-
+.paper {
+	background: khaki;
+	padding: 10px;
+	margin: 10px;
+}
+.paper h1{
+	font-family: oldlondon;
+}
 .letter {
 	padding: 10px;
 	border-style: solid;

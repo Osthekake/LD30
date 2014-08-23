@@ -75,9 +75,18 @@ var Pages = {
 			new Link("Previous page", "page1")
 		],
 		style : "journal"
-	}
-	"page3" : {
+	},
+	"404" : {
 		content : [
+			new Header([new JustText("404")]),
+			new JustText("Page not found!"),
+		],
+		style : "journal"
+	},
+	"www.paper.com/bankrupcy" : {
+		content : [
+			new Header([new JustText("The Paper")]),
+			new Header([new JustText("Conway Bankrupt")], "h2"),
 			new JustText("Henry Conway was declared bankrupt yesterday. The business mogul, whose "),
 			new Clue("brother George ", "harolds_father_is_bankrupt"),
 			new JustText("is well-known on these pages for his "),
@@ -85,6 +94,6 @@ var Pages = {
 			new JustText("was forced to put his company into administration."),
 			new Link("?")
 		],
-		style : "??"
+		style : "paper"
 	}
 }

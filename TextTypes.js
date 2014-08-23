@@ -18,9 +18,11 @@ function JustText(theText){
 	this.text = theText;
 }
 
-function Header(nodes){
+function Header(nodes, type){
 	this.nodes = nodes;
+	this.type = type || "h1";
 }
+
 
 function Link(theText, link){
 	this.text = theText;
@@ -56,7 +58,7 @@ Image.prototype = {
 
 Header.prototype = {
 	asHTML : function() {
-		var p = document.createElement('h1');
+		var p = document.createElement(this.type);
 		for (var i = 0; i < this.nodes.length; i++) {
 			p.appendChild(this.nodes[i].asHTML());
 		};
