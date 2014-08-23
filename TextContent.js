@@ -13,6 +13,24 @@ var Pages = {
 		],
 		style : "journal"
 	},	
+	"www.scroogle.com/Beauly%20House" : {
+		content : [
+			new Header([new JustText("Scroogle")]),
+			new JustText("Search: "),
+			new StyledDiv([new JustText("Beauly House")], "bordered"),
+			new Paragraph([
+				new Header([new Link("Beauly House", "www.beuly-house.com")], "h3"),
+				new StyledDiv([new Link("www.beuly-house.com", "www.beuly-house.com")], "small"),
+				new JustText("The home of the Conways...<br/>")
+			]),
+			new Paragraph([
+				new Header([new Link("Conway Bankrupt", "www.paper.com/bankrupcy")], "h3"),
+				new StyledDiv([new Link("www.paper.com/bankrupcy", "www.paper.com/bankrupcy")], "small"),
+				new JustText("The paper is your go-to place for all news...<br/>")
+			])
+		],
+		style : "scroogle"
+	},	
 	"www.letters.com/1" : {
 		content : [
 			new Header([new JustText("Your mail, your honor.")]),
@@ -33,7 +51,7 @@ var Pages = {
 						new JustText("------------------------------------<br/><br/>"),
 						new JustText("Dear Sir or Madam<br/><br/>"),
 						new JustText("Mysterious circumstances have occured at "),
-						new Link("Beauly House.", "www.beuly-house.com"),
+						new Link("Beauly House.", "www.scroogle.com/Beauly%20House"),
 						new JustText(" Your special investigative skills, and unique intelligence resources are required. Commence investigation immediately.<br/><br/>"),
 						new JustText("E<br/>")
 					],
@@ -52,29 +70,6 @@ var Pages = {
 			new Paragraph([new JustText("Welcome to Beuly House")])
 		],
 		style : "mansion"
-	},
-	"page1" : {
-		content : [
-			new JustText("This text is just a normal text."),
-			new JustText("Texts will appear after each other with no visual impact, even if you split them up like this."),
-			new JustText("The point of this will become apparent when we introduce clues:<br/>"),
-			new JustText("Anne Conway went to the ball last night. She was there with "),
-			new Clue("her three daughters ", "anne_has_daughters"),
-			new JustText("and "),
-			new Clue("her husband George. ", "anne_is_married_to_george"),
-			new JustText("<br/>Texts can contain HTML, and this is a link:<br/>"),
-			new Link("Next page", "page2")
-		],
-		style : "journal"
-	},
-	"page2" : {
-		content : [
-			new JustText("More clues for fun:<br/>"),
-			new Clue("Jane's last name is Conway!<br/>", "jane_and_anne_have_same_last_name"),
-			new Clue("Jane murdered her own father!<br/>", "jane_killed_her_father"),
-			new Link("Previous page", "page1")
-		],
-		style : "journal"
 	},
 	"404" : {
 		content : [
