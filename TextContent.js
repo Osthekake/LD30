@@ -224,7 +224,7 @@ var Pages = {
 			new StyledDiv([
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" Where are you? You keep disappearing! xx")]),
 				new StyledDiv([
-					new link("Frederick Fitzcharles", "www.facespace.com/fredf"),
+					new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
 					new JustText("Sorry darling, I've been busy working on a surprise. TTYL")
 					], "facehistory"
 				)
@@ -232,20 +232,20 @@ var Pages = {
 			),
 			new StyledDiv([
 				new Paragraph([new JustText("I love my little sisters! They're so talented!")]),
-				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" likes this.")])
-				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this")])
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" likes this.")]),
+				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this")]),
 				new Paragraph([new Link("Anna Conway", "www.facespace.com/annac"), new JustText(" likes this")])
 				], "facehistory"
 			),
 			new StyledDiv([
 				new Paragraph([new JustText("Loved Anna's singing last night! Voice of an angel!")]),
-				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")]),
 				new Paragraph([new Link("Anna Conway", "wwww.facespace.com/annac"), new JustText(" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
 				new Paragraph([new JustText("Painting the folly today with the new paints Daddy gave me!")]),
-				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")]),
 				new Paragraph([new Link("George Conway", "wwww.facespace.com/georgec"), new JustText(" likes this.")])
 				], "facehistory"
 			),
@@ -307,10 +307,10 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("She walks in beauty, like the night<br/>")
-					new JustText("Of cloudless climes and starry skies;<br/>")
-					new JustText("And all that's best of dark and bright<br/>")
-					new JustText("Meet in her aspect and her eyes")])
+				new Paragraph([new JustText("She walks in beauty, like the night<br/>"),
+					new JustText("Of cloudless climes and starry skies;<br/>"),
+					new JustText("And all that's best of dark and bright<br/>"),
+					new JustText("Meet in her aspect and her eyes")]),
 				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText(" likes this.")])
 				], "facehistory"
 			)
