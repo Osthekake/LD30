@@ -27,6 +27,7 @@ Sites = {
 		content : [
 			new Header([new JustText("Beauly House")]),
 			new StyledDiv([
+				new Link("Home", "www.beuly-house.com"),
 				new Link("Work for us", "www.beuly-house.com/positions"),
 				new Link("Our Business", "www.beuly-house.com/enterprise"),
 				new Link("The Location", "www.beuly-house.com/location"),
