@@ -210,8 +210,8 @@ var Pages = {
 			new StyledDiv([
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" Where are you? You keep disappearing! xx")]),
 				new StyledDiv([
-					new link("Frederick Fitzcharles", "www.facespace.com/fredf"),
-					new JustText("Sorry darling, I've been busy working on a surprise. TTYL")
+					new link([("Frederick Fitzcharles", "www.facespace.com/fredf")]),
+					new JustText([("Sorry darling, I've been busy working on a surprise. TTYL")])
 					], "facehistory"
 				)
 				], "facehistory"
