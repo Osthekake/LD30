@@ -144,9 +144,12 @@ var Pages = {
 	"www.facespace.com/georgec" : new PutInSite("www.facespace.com", {
 		"face" : [
 			new Header([new JustText("George Conway")], "h2"),
+			new JustText("Age: 44 "),
 			new JustText("Social status: Married to "), new Link("Anne Beauly", "www.facespace.com/anneb"),
 			new StyledDiv([
-				new Paragraph([new JustText("George Conway went fishing. (22.6.1904)<br/>"), new JustText("Harold Conway likes this.")])
+				new Paragraph([new JustText("George Conway went fishing. (22.6.1904)<br/>"), 
+					new Link("Harold Conway", "www.facespace.com/haroldc"), 
+					new JustText(" likes this.")])
 				], "facehistory"
 			)
 		]
@@ -154,7 +157,80 @@ var Pages = {
 	"www.facespace.com/anneb" : new PutInSite("www.facespace.com", {
 		"face" : [
 			new Header([new JustText("Anne Beauly")], "h2"),
+			new JustText("Age: 46 "),
 			new JustText("Social status: Married to "), new Link("George Conway", "www.facespace.com/georgec"),
+			new StyledDiv([
+				new JustText("(12.5.1906) Anne wrote on her brothers wall on his birthday:"),
+				new Paragraph([new JustText("Miss you brother...")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" looking so pretty at the ball tonight. Love you dear!")])
+				], "facehistory"
+			),
+	
+		]
+	}),
+	"www.facespace.com/georgiac" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Georgia Conway")], "h2"),
+			new JustText("Age: 21 "),
+			new JustText("Social status: Engaged to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
+			new StyledDiv([
+				new Paragraph([new JustText("(14.02.1906) Georgia is now engaged to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf")]),
+				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/haroldc" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Harold Conway")], "h2"),
+			new JustText("Age: 22 "),
+			new JustText("Social status: Single"),
+			new StyledDiv([
+				new Paragraph([new JustText("Big man is out. Cards tonight?")]),
+				new StyledDiv([
+					new Link("Anna Conway", "www.facespace.com/annac"),
+					new JustText(" Totally!")
+					], "facehistory"
+				)
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/fredf" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Frederick Fitzcharles")], "h2"),
+			new JustText("Age: 24 "),
+			new JustText("Social status: Engaged to "), new Link("Georgia Conway", "www.facespace.com/georgiac"),
+			new StyledDiv([
+				new Paragraph([new JustText("Why wasn't I invited to go fishing?")]),
+				new StyledDiv([
+					new Link("Harold Conway", "www.facespace.com/haroldc"),
+					new JustText(" Cards instead?")
+					], "facehistory"
+				)
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/annac" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Anna Conway")], "h2"),
+			new JustText("Age: 20 "),
+			new JustText("Social status: Single"),
+			new StyledDiv([
+				new Paragraph([new JustText("Has anyone seen my silver letter opener?")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/janec" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Jane Conway")], "h2"),
+			new JustText("Age: 17 "),
+			new JustText("Social status: Single"),
 			new StyledDiv([
 				new Paragraph([new JustText("no recent events.")])
 				], "facehistory"
