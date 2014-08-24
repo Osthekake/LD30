@@ -1,3 +1,30 @@
+Sites = {
+	"www.letters.com" : {
+		content : [
+			new Header([new JustText("Your mail, your honor.")]),
+			new StyledDiv([
+				new StyledDiv(
+					[
+						new JustText("Inbox:<br/>"),
+						new JustText("1 new mail<br/>"),
+						new Link("Call to duty<br/>", "www.letters.com/1")
+					],
+					"left-box"
+				),
+				new StyledDiv([new Article("letter")], "letter")
+			])
+		],
+		style : "mail"
+	},
+	"www.paper.com" : {
+		content : [
+			new Header([new JustText("The Paper")]),
+			new Article("article")
+		],
+		style : "paper"
+	}
+}
+
 var Pages = {
 	"about:game" : {
 		content : [
@@ -31,36 +58,20 @@ var Pages = {
 		],
 		style : "scroogle"
 	},	
-	"www.letters.com/1" : {
-		content : [
-			new Header([new JustText("Your mail, your honor.")]),
-			new StyledDiv([
-				new StyledDiv(
-					[
-						new JustText("Inbox:<br/>"),
-						new Link("Call to duty<br/>", "www.letters.com/1")
-					],
-					"left-box"
-				),
-				new StyledDiv(
-					[
-						new JustText("Sent: 24.06.1864<br/>"),
-						new JustText("To: detective@royal.detective.services.uk<br/>"),
-						new JustText("From: imperialguard@edwardroyalcourt.uk<br/>"),
-						new JustText("Subject: Call to duty<br/>"),
-						new JustText("------------------------------------<br/><br/>"),
-						new JustText("Dear Sir or Madam<br/><br/>"),
-						new JustText("Mysterious circumstances have occured at "),
-						new Link("Beauly House.", "www.scroogle.com/Beauly%20House"),
-						new JustText(" Your special investigative skills, and unique intelligence resources are required. Commence investigation immediately.<br/><br/>"),
-						new JustText("E<br/>")
-					],
-					"letter"
-				)
-			])
-		],
-		style : "mail"
-	},
+	"www.letters.com/1" : new PutInSite("www.letters.com", {
+		"letter" : [
+			new JustText("Sent: 24.06.1864<br/>"),
+			new JustText("To: detective@royal.detective.services.uk<br/>"),
+			new JustText("From: imperialguard@edwardroyalcourt.uk<br/>"),
+			new JustText("Subject: Call to duty<br/>"),
+			new JustText("------------------------------------<br/><br/>"),
+			new JustText("Dear Sir or Madam<br/><br/>"),
+			new JustText("Mysterious circumstances have occured at "),
+			new Link("Beauly House.", "www.scroogle.com/Beauly%20House"),
+			new JustText(" Your special investigative skills, and unique intelligence resources are required. Commence investigation immediately.<br/><br/>"),
+			new JustText("E<br/>")
+		]			
+	}),
 	"www.beuly-house.com" : {
 		content : [
 			new Header([new JustText("Beauly House")]),
@@ -78,17 +89,23 @@ var Pages = {
 		],
 		style : "journal"
 	},
-	"www.paper.com/bankrupcy" : {
-		content : [
-			new Header([new JustText("The Paper")]),
+	"www.paper.com/bankrupcy" : new PutInSite("www.paper.com", {
+		"article" : [
 			new Header([new JustText("Conway Bankrupt")], "h2"),
+			new Header([new JustText("Date: 13.06.1864")], "h4"),
 			new JustText("Henry Conway was declared bankrupt yesterday. The business mogul, whose "),
 			new Clue("brother George ", "harolds_father_is_bankrupt"),
 			new JustText("is well-known on these pages for his "),
 			new Clue("business concerns in the Orient, ", "the_Conway_fortune_comes_from_China"),
 			new JustText("was forced to put his company into administration."),
 			new Link("?")
-		],
-		style : "paper"
-	}
+		]
+	}),
+	"www.paper.com/shipwreck" : new PutInSite("www.paper.com", {
+		"article" : [
+			new Header([new JustText("Ships Gone ashore after Storm last night")], "h2"),
+			new Header([new JustText("Date: 11.05.1864")], "h4"),
+			new JustText("A ship floated ashore last night. It was scary.")
+		]
+	})
 }
