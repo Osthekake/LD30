@@ -226,7 +226,8 @@ var Pages = {
 			new JustText("Age: 21 "),
 			new JustText("Social status: Engaged to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
 			new StyledDiv([
-				new Paragraph([new JustText("(14.02.1906) Georgia is now engaged to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf")]),
+				new Paragraph([new JustText("(14.02.1906) Georgia "), new Clue("is now engaged", "georgia_engaged_to_freddy"), 
+				new JustText(" to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf")]),
 				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this.")])
 				], "facehistory"
 			),

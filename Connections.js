@@ -3,10 +3,9 @@ var Connections = {
 		coords : [8, 6, 8, 7],
 		tooltip : "Frederick Fitzcharles is dead.",
 		onsolved : function(){
-			MailBox.addMail("Coroners Report", "www.letters.com/2");
+			MailBox.addMail("Coroner", "www.letters.com/2");
 		}
 	},
-
 
 	"freddy_was_stabbed" : {
 		coords : [8, 7, 8, 8],
@@ -18,7 +17,7 @@ var Connections = {
 	},
 	//connections for charles is heir:
 	"charles_is_heir_to_beauly": {
-		coords : [5, 1, 5, 4],
+		coords : [6, 1, 6, 4],
 		tooltip : "Chales Weatherby is the heir to Beauly House.",
 		children : ["charles_is_johns_son", "anne_had_an_elder_brother", "anne_has_only_daughters", "george_inherited_through_anne"]
 	},
@@ -27,7 +26,7 @@ var Connections = {
 		tooltip : "Charles Weatherby is the natural son of John Beauly." //relates to jane_loves_charles
 	},
 	"anne_had_an_elder_brother" : {
-		coords : [5, 1, 7, 2],
+		coords : [6, 1, 7, 2],
 		tooltip: "John Beauly was Anne Conway's elder brother."
 	},
 	"anne_has_only_daughters" : {
@@ -35,7 +34,7 @@ var Connections = {
 		tooltip : "All of Annes children are girls."
 	},
 	"george_inherited_through_anne" : {
-		coords : [7, 3, 5, 4],
+		coords : [7, 3, 6, 4],
 		tooltip : "George Conway married into Beauly House through Anne."
 	},
 
@@ -43,12 +42,12 @@ var Connections = {
 		coords : [9, 7, 8, 8],
 		tooltip : "Anna is missing a sharp object.",
 		onsolved : function(){
-			MailBox.addMail("My letter opener", "www.letters.com/3");
+			MailBox.addMail("Weapon", "www.letters.com/3");
 		}
 	},
 
 	"freddy_motive_to_kill_charles" : {
-		coords : [5, 1, 4, 4],
+		coords : [6, 1, 4, 4],
 		tooltip : "Frederick had a motive to kill charles.",
 		children : ["charles_is_heir_to_beauly", "georgia_engaged_to_freddy", "freddy_had_a_gun"]
 	},
@@ -57,8 +56,31 @@ var Connections = {
 		tooltip : "Georgia Conway is engaged to Freddy Fitzcharles."
 	},
 	"freddy_had_a_gun" : {
-		coords : [5, 3, 4, 4],
+		coords : [6, 3, 4, 4],
 		tooltip : "Freddy posessed a gun when he died."
+	},
+	"georgia_motive" : {
+		coords : [5, 2, 4, 4],
+		tooltip : "Georgia has a motive to kill Frederick.",
+		children : ["freddy_sleeping_with_rosie", "georgia_knows_freddys_secret"]
+	},
+	"rosie_mother_motive" : {
+		coords : [2, 2, 4, 4],
+		tooltip : "Rosies mother has a motive to kill Frederick.",
+		children : ["freddy_sleeping_with_rosie", "rosie_mother_knows_freddys_secret"]
+	},
+
+	"freddy_sleeping_with_rosie" : {
+		coords : [4, 3, 4, 4],
+		tooltip : "Freddy has been having an affair with Rosie." // relates to georgia_engaged_to_freddy
+	},
+	"georgia_knows_freddys_secret" : {
+		coords : [5, 2, 4, 3],
+		tooltip : "Georgia knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
+	},
+	"rosie_mother_knows_freddys_secret" : {
+		coords : [2, 2, 4, 3],
+		tooltip : "Georgia knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
 	},
 	
 
@@ -76,10 +98,6 @@ var Connections = {
 	"jane_loves_charles" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "Jane Conway is in love with Charles Weatherby." // relates to charles_is_johns_son, jane_killed_her_father
-	},
-	"freddy_sleeping_with_rosie" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Freddy has been having an affair with Rosie." // relates to georgia_engaged_to_freddy
 	},
 	"anna_loves_tall_mary" : {
 		coords : [0, 0, 0, 0],
@@ -100,10 +118,6 @@ var Connections = {
 	"freddy_knows_annas_secret" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "Freddy knows that Anna is sleeping with Tall Mary." // relates to freddy_and_anna_mad, anna_loves_tall_mary
-	},
-	"anna_knows_freddys_secret" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Anna knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
 	},
 	"young_mary_fainting" : {
 		coords : [0, 0, 0, 0],
