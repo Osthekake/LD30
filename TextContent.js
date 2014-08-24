@@ -226,13 +226,7 @@ var Pages = {
 			new JustText("Age: 21 "),
 			new JustText("Social status: Engaged to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
 			new StyledDiv([
-				new Paragraph([new JustText("(14.02.1906) Georgia "), new Clue("is now engaged", "georgia_engaged_to_freddy"), 
-				new JustText(" to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf")]),
-				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this.")])
-				], "facehistory"
-			),
-			new StyledDiv([
-				new Paragraph([new JustText("Finished my painting! The folly looks so beautiful at sunset!")]),
+				new Paragraph([new JustText("Nearly finished my painting! The folly looks so beautiful at sunset!")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
 			),
@@ -273,7 +267,13 @@ var Pages = {
 				new Paragraph([new JustText("Really looking forward to seeing my darling Freddy tonight!! xoxoxoxo")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
-			)
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(14.02.1906) Georgia "), new Clue("is now engaged", "georgia_engaged_to_freddy"), 
+				new JustText(" to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf")]),
+				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this.")])
+				], "facehistory"
+			),
 		]
 	}),
 	"www.facespace.com/haroldc" : new PutInSite("www.facespace.com", {
@@ -328,6 +328,10 @@ var Pages = {
 					new JustText("Meet in her aspect and her eyes")]),
 				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText(" likes this.")])
 				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Singing scales. Need to get practice in for tonight!")])
+				], "facehistory"
 			)
 		]
 	}),
@@ -336,6 +340,94 @@ var Pages = {
 			new Header([new JustText("Jane Conway")], "h2"),
 			new JustText("Age: 17 "),
 			new JustText("Social status: Single"),
+			new StyledDiv([
+				new Paragraph([new JustText("no recent events.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/maryt" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Mary Tallman")], "h2"),
+			new JustText("Age: 19 "),
+			new JustText("Social status: It's complicated"),
+			new JustText("Works as: housemaid at Beauly House"),
+			new StyledDiv([
+				new Paragraph([new JustText("no recent events.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/maryy" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Mary Younger")], "h2"),
+			new JustText("Age: 45 "),
+			new JustText("Social status: Single"),
+			new JustText("Works as: housemaid at Beauly House"),
+			new StyledDiv([
+				new Paragraph([new JustText("no recent events.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/rosieb" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Rosie Blackwood")], "h2"),
+			new JustText("Age: 16 "),
+			new JustText("Social status: single"),
+			new JustText("Works as: housemaid at Beauly House"),
+			new StyledDiv([
+				new Paragraph([new JustText("oops think sum1 saw us lol")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("goin to the folly with my man yay")]) // needs clue link
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/charlesw" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Charles Weatherby")], "h2"),
+			new JustText("Age: 23 "),
+			new JustText("Social status: Single"),
+			new JustText("Works as: footman at Beauly House"),
+			new StyledDiv([
+				new Paragraph([new JustText("no recent events.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/edwardw" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Edward Weatherby")], "h2"),
+			new JustText("Age: 50 "),
+			new JustText("Social status: Married to"), new Link("Mary Helen Weatherby", "www.facespace.com/maryw"),
+			new JustText("Works as: butler at Beauly House"),
+			new StyledDiv([
+				new Paragraph([new JustText("no recent events.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/maryw" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Mary Helen Weatherby")], "h2"),
+			new JustText("Age: 46 "),
+			new JustText("Social status: Married to"), new Link("Edward Weatherby", "www.facespace.com/edwardw"),
+			new JustText("Works as: cook at Beauly House"),
+			new StyledDiv([
+				new Paragraph([new JustText("no recent events.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/aliceb" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Alice Blackwood")], "h2"),
+			new JustText("Age: 55 "),
+			new JustText("Social status: Widowed"),
+			new JustText("Works as: housekeeper at Beauly House"),
 			new StyledDiv([
 				new Paragraph([new JustText("no recent events.")])
 				], "facehistory"
