@@ -287,6 +287,18 @@ var Pages = {
 			new StyledDiv([
 				new Paragraph([new JustText("Has anyone seen my silver letter opener?")])
 				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Anyone else ever feel like they were born in the wrong time?")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("She walks in beauty, like the night<br/>")
+					new JustText("Of cloudless climes and starry skies;<br/>")
+					new JustText("And all that's best of dark and bright<br/>")
+					new JustText("Meet in her aspect and her eyes")])
+				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText(" likes this.")])
+				], "facehistory"
 			)
 		]
 	}),
