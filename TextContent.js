@@ -23,15 +23,15 @@ Sites = {
 		],
 		style : "paper"
 	},
-	"www.beuly-house.com" : {
+	"www.beauly-house.com" : {
 		content : [
 			new Header([new JustText("Beauly House")]),
 			new StyledDiv([
-				new Link("Home", "www.beuly-house.com"),
-				new Link("Work for us", "www.beuly-house.com/positions"),
-				new Link("Our Business", "www.beuly-house.com/enterprise"),
-				new Link("The Location", "www.beuly-house.com/location"),
-				new Link("Contact", "www.beuly-house.com/contact")
+				new Link("Home", "www.beauly-house.com"),
+				new Link("Work for us", "www.beauly-house.com/positions"),
+				new Link("Our Business", "www.beauly-house.com/enterprise"),
+				new Link("The Location", "www.beauly-house.com/location"),
+				new Link("Contact", "www.beauly-house.com/contact")
 			], "bar"),
 			new Article("mansion")
 		],
@@ -72,8 +72,8 @@ var Pages = {
 			new JustText("Search: "),
 			new StyledDiv([new JustText("Beauly House")], "bordered"),
 			new Paragraph([
-				new Header([new Link("Beauly House", "www.beuly-house.com")], "h3"),
-				new StyledDiv([new Link("www.beuly-house.com", "www.beuly-house.com")], "small"),
+				new Header([new Link("Beauly House", "www.beauly-house.com")], "h3"),
+				new StyledDiv([new Link("www.beauly-house.com", "www.beauly-house.com")], "small"),
 				new JustText("The home of the Conways...<br/>")
 			]),
 			new Paragraph([
@@ -98,7 +98,7 @@ var Pages = {
 			new JustText("E<br/>")
 		]			
 	}),
-	"www.beuly-house.com" : new PutInSite("www.beuly-house.com", {
+	"www.beualy-house.com" : new PutInSite("www.beualy-house.com", {
 		"mansion" : [
 			new StyledDiv([
 				new Image("img/mansion.jpg", 250, 200)
@@ -106,13 +106,13 @@ var Pages = {
 			new Paragraph([new JustText("Welcome to Beauly House. The home of the Conways.")])
 		]
 	}),
-	"www.beuly-house.com/contact" : new PutInSite("www.beuly-house.com", {
+	"www.beauly-house.com/contact" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("Contact information:")], "h2"),
-			new Paragraph([new Link("George Conway", "www.facespace.com/georgec"), new JustText(": george@beuly-house.com")])
+			new Paragraph([new Link("George Conway", "www.facespace.com/georgec"), new JustText(": george@beauly-house.com")])
 		]
 	}),
-	"www.beuly-house.com/positions" : new PutInSite("www.beuly-house.com", {
+	"www.beauly-house.com/positions" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("Currently hiring:")], "h2"),
 			new Paragraph([new Header([new JustText("Housemaid")], "h3"), new JustText("Clean, moral girl with good loyalty.")]),
@@ -120,14 +120,14 @@ var Pages = {
 			new Paragraph([new JustText("Contact via mail for more information.")]),
 		]
 	}),
-	"www.beuly-house.com/enterprise" : new PutInSite("www.beuly-house.com", {
+	"www.beauly-house.com/enterprise" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("The Conway Enterprise")], "h2"),
 			new Paragraph([new Header([new JustText("Conway Shipping")], "h3"), new JustText("We ship goods all the way to and from the far east.")]),
-			new Paragraph([new JustText("Looking to invest? Contact george@beuly-house.com")]),
+			new Paragraph([new JustText("Looking to invest? Contact george@beauly-house.com")]),
 		]
 	}),
-	"www.beuly-house.com/location" : new PutInSite("www.beuly-house.com", {
+	"www.beauly-house.com/location" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("The Beauly Mansion")], "h2"),
 			new Paragraph([new JustText("We have many floors.")]),
