@@ -1,30 +1,53 @@
 var Connections = {
-	"charles_weatherby_is_dead" : {
-		coords : [5, 0, 5, 1],
-		tooltip : "Charles weatherby is dead."
+	"freddy_is_dead" : {
+		coords : [5, 10, 5, 11],
+		tooltip : "Frederick Fitzcharles is dead."
 	},
 
-
+	//connections for charles is heir:
+	"charles_is_heir_to_beauly": {
+		coords : [5, 1, 5, 4],
+		tooltip : "Chales Weatherby is the heir to Beauly House.",
+		children : ["charles_is_johns_son", "anne_had_an_elder_brother", "anne_has_only_daughters", "george_inherited_through_anne"]
+	},
+	"charles_is_johns_son" : {
+		coords : [7, 1, 7, 2],
+		tooltip : "Charles Weatherby is the natural son of John Beauly." //relates to jane_loves_charles
+	},
 	"anne_had_an_elder_brother" : {
-		coords : [1, 0, 2, 0],
+		coords : [5, 1, 7, 2],
 		tooltip: "John Beauly was Anne Conway's elder brother."
 	},
-	"jane_killed_her_father" : {
-		coords : [2, 1, 3, 1],
-		tooltip : "Jane Conway killed her father."
+	"anne_has_only_daughters" : {
+		coords : [7, 2, 7, 3],
+		tooltip : "All of Annes children are girls."
 	},
-	"anne_is_married_to_george" : {
-		coords : [0, 0, 1, 0],
-		tooltip : "Anne and George Conway are married."
+	"george_inherited_through_anne" : {
+		coords : [7, 3, 5, 4],
+		tooltip : "George Conway married into Beauly House through Anne."
 	},
+
+
+	"freddy_motive_to_kill_charles" : {
+		coords : [5, 1, 4, 4],
+		tooltip : "Frederick had a motive to kill charles.",
+		children : ["charles_is_heir_to_beauly", "georgia_engaged_to_freddy", "freddy_had_a_gun"]
+	},
+	"georgia_engaged_to_freddy" : {
+		coords : [3, 3, 4, 4],
+		tooltip : "Georgia Conway is engaged to Freddy Fitzcharles."
+	},
+	"freddy_had_a_gun" : {
+		coords : [5, 3, 4, 4],
+	},
+	
+	
+
 	"jane_and_anne_have_same_last_name" : {
 		coords : [2, 0, 2, 1],
 		tooltip : "Jane and Anne are both named Conway."
 	},
-	"charles_is_johns_son" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Charles Weatherby is the natural son of John Beauly." //relates to jane_loves_charles
-	},
+	
 	"john_is_janes_uncle" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "John Beauly is Jane Conways uncle.",
@@ -33,10 +56,6 @@ var Connections = {
 	"jane_loves_charles" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "Jane Conway is in love with Charles Weatherby." // relates to charles_is_johns_son, jane_killed_her_father
-	},
-	"georgia_engaged_to_freddy" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Georgia Conway is engaged to Freddy Fitzcharles."
 	},
 	"freddy_sleeping_with_rosie" : {
 		coords : [0, 0, 0, 0],
