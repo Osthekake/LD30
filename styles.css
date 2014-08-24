@@ -23,7 +23,7 @@ a:visited{
 	background: gainsboro;
 }
 .mail {
-	background: sienna;
+	background-image: url(img/desk.jpg);
 	padding: 10px;
 	margin: 10px;
 }
@@ -34,7 +34,7 @@ a:visited{
 }
 .paper {
 	font-family: monospace;
-	background: khaki;
+	background-image: url(img/paper.jpg);
 	padding: 10px;
 	margin: 10px;
 }
@@ -43,11 +43,10 @@ a:visited{
 }
 .letter {
 	padding: 10px;
-	border-style: solid;
 	width: 500;
 	float: right;
 	display: inline-block;
-	background: khaki;
+	background-image: url(img/letter.jpg);
 	font-family: monospace;
 }
 
@@ -78,9 +77,13 @@ a:visited{
 	cursor: zoom-in;
 }
 .mansion{
-	background: khaki;
+	background-image: url(img/flowers.jpg);
 	padding: 10px;
 	margin: 10px;
+	color: lightyellow;
+}
+.mansion a:visited{
+	color: mintcream;	
 }
 .mansion h1{
 	font-family: 'Parisienne', cursive;
