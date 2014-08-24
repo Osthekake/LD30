@@ -7,6 +7,15 @@ var Connections = {
 		}
 	},
 
+
+	"freddy_was_stabbed" : {
+		coords : [8, 7, 8, 8],
+		tooltip : "Frederick Fitzcharles was killed by stabbing.",
+	},
+	"freddy_struggled" : {
+		coords : [7, 6, 8, 6],
+		tooltip : "Frederick Fitzcharles died in a struggle.",
+	},
 	//connections for charles is heir:
 	"charles_is_heir_to_beauly": {
 		coords : [5, 1, 5, 4],
@@ -42,6 +51,7 @@ var Connections = {
 	},
 	"freddy_had_a_gun" : {
 		coords : [5, 3, 4, 4],
+		tooltip : "Freddy posessed a gun when he died."
 	},
 	
 

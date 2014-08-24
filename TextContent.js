@@ -90,6 +90,11 @@ var Pages = {
 				new Header([new Link("Conway Bankrupt", "www.paper.com/bankrupcy")], "h3"),
 				new StyledDiv([new Link("www.paper.com/bankrupcy", "www.paper.com/bankrupcy")], "small"),
 				new JustText("The paper is your go-to place for all news...<br/>")
+			]),
+			new Paragraph([
+				new Header([new Link("Ships Ashore", "www.paper.com/shipwreck")], "h3"),
+				new StyledDiv([new Link("www.paper.com/shipwreck", "www.paper.com/shipwreck")], "small"),
+				new JustText("The paper is your go-to place for all news...<br/>")
 			])
 		],
 		style : "scroogle"
@@ -117,12 +122,21 @@ var Pages = {
 	}),
 	"www.letters.com/2" : new PutInSite("www.letters.com", {
 		"letter" : [
-			new JustText("Sent: 24.06.1904<br/>"),
+			new JustText("Sent: 25.06.1904<br/>"),
 			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
 			new JustText("From: coroner@edwardroyalcourt.gov.uk<br/>"),
 			new JustText("Subject: Coroners report<br/>"),
 			new JustText("------------------------------------<br/><br/>"),
-			new JustText("Dead body")
+			new JustText("The deceased ("), new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
+			new JustText(") died from being "), 
+			new Clue("stabbed by a sharp object.", "freddy_was_stabbed"),
+			new JustText(" His arms show "),
+			new Clue("signs of struggle", "freddy_struggled"),
+			new JustText(", and a "),
+			new Clue("gun", "freddy_had_a_gun"),
+			new JustText(" belonging to "),
+			new Link("George Conway", "www.facespace.com/georgec"),
+			new JustText(" was found near the body. <br/><br/>G")	
 		], 
 		reload : true
 	}),
@@ -287,7 +301,11 @@ var Pages = {
 			new Header([new JustText("Ships Washed Ashore After Fierce Storm")], "h2"),
 			new Header([new JustText("Date: 11.05.1904")], "h4"),
 			new JustText("Following an unseasonable gale, several ships and small boat were found washed ashore down the coast, having been ripped away from their moorings in the night.<br/>"),
-			new JustText("All of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth.")
+			new JustText("All of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth.<br/>"),
+			new Image("img/women.jpg", 150, 250),
+			new JustText("<br/>(in the picture:) Anne Conway and "),
+			new Clue("her three daughters", "anne_has_only_daughters"),
+			new JustText(" are looking at the ships.")
 		]
 	})
 }
