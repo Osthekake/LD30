@@ -201,7 +201,12 @@ var Pages = {
 				new Paragraph([new JustText("(14.02.1906) Georgia is now engaged to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf")]),
 				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this.")])
 				], "facehistory"
-			)
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Finished my painting! The folly looks so beautiful at sunset!")]),
+				new Paragraph ([new Link("Freddy Fitzcharles", "www.facespace.com/freddyf"), new JustText (" likes this.")])
+				], "facehistory"
+			),
 		]
 	}),
 	"www.facespace.com/haroldc" : new PutInSite("www.facespace.com", {
