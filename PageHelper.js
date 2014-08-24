@@ -17,7 +17,7 @@ var PageHelper = {
 		for(var pageId in Pages){
 			var page = Pages[pageId];
 			//console.log(page);
-			console.log(pageId)
+			//console.log(pageId)
 			if(page.content){
 				page.element = document.createElement('div');
 				for (var i = 0; i < page.content.length; i++) {

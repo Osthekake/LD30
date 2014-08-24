@@ -22,7 +22,20 @@ Sites = {
 			new Article("article")
 		],
 		style : "paper"
-	}
+	},
+	"www.beuly-house.com" : {
+		content : [
+			new Header([new JustText("Beauly House")]),
+			new StyledDiv([
+				new Link("Work for us", "www.beuly-house.com/positions"),
+				new Link("Our Business", "www.beuly-house.com/enterprise"),
+				new Link("The Location", "www.beuly-house.com/location"),
+				new Link("Contact", "www.beuly-house.com/contact")
+			], "bar"),
+			new Article("mansion")
+		],
+		style : "mansion"
+	},
 }
 
 var Pages = {
@@ -34,7 +47,7 @@ var Pages = {
 				new JustText("Instructions:<br/>"),
 				new JustText("* Click on clues to build a case.<br/>"),
 				new JustText("* Click on links to navigate around, or:<br/>"),
-				new JustText("* Enter urls or search words in the bar above.<br/>"),
+				new JustText("* Enter urls in the bar above.<br/>"),
 				new StyledDiv([new Link("Start Game", "www.letters.com/1")], "bordered")
 			], "centered")
 		],
@@ -60,7 +73,7 @@ var Pages = {
 	},	
 	"www.letters.com/1" : new PutInSite("www.letters.com", {
 		"letter" : [
-			new JustText("Sent: 24.06.1864<br/>"),
+			new JustText("Sent: 24.06.1904<br/>"),
 			new JustText("To: detective@royal.detective.services.uk<br/>"),
 			new JustText("From: imperialguard@edwardroyalcourt.uk<br/>"),
 			new JustText("Subject: Call to duty<br/>"),
@@ -72,16 +85,42 @@ var Pages = {
 			new JustText("E<br/>")
 		]			
 	}),
-	"www.beuly-house.com" : {
-		content : [
-			new Header([new JustText("Beauly House")]),
+	"www.beuly-house.com" : new PutInSite("www.beuly-house.com", {
+		"mansion" : [
 			new StyledDiv([
 				new Image("img/mansion.jpg", 250, 200)
 			], "", "float:right;"),
 			new Paragraph([new JustText("Welcome to Beuly House. The home of the Conways.")])
-		],
-		style : "mansion"
-	},
+		]
+	}),
+	"www.beuly-house.com/contact" : new PutInSite("www.beuly-house.com", {
+		"mansion" : [
+			new Header([new JustText("Contact information:")], "h2"),
+			new Paragraph([new JustText("George Conway: george@beuly-house.com")])
+		]
+	}),
+	"www.beuly-house.com/positions" : new PutInSite("www.beuly-house.com", {
+		"mansion" : [
+			new Header([new JustText("Currently hiring:")], "h2"),
+			new Paragraph([new Header([new JustText("Housemaid")], "h3"), new JustText("Clean, moral girl with good loyalty.")]),
+			new Paragraph([new Header([new JustText("Gardener")], "h3"), new JustText("Self sufficient and skilled gardener with clean past.")]),
+			new Paragraph([new JustText("Contact via mail for more information.")]),
+		]
+	}),
+	"www.beuly-house.com/enterprise" : new PutInSite("www.beuly-house.com", {
+		"mansion" : [
+			new Header([new JustText("The Conway Enterprise")], "h2"),
+			new Paragraph([new Header([new JustText("Conway Shipping")], "h3"), new JustText("We ship goods all the way to and from the far east.")]),
+			new Paragraph([new JustText("Looking to invest? Contact george@beuly-house.com")]),
+		]
+	}),
+	"www.beuly-house.com/location" : new PutInSite("www.beuly-house.com", {
+		"mansion" : [
+			new Header([new JustText("The Beauly Mansion")], "h2"),
+			new Paragraph([new JustText("We have many floors.")]),
+			new Paragraph([new JustText("Contact the Weatherbys for a tour of the grounds")]),
+		]
+	}),
 	"404" : {
 		content : [
 			new Header([new JustText("404")]),
@@ -92,7 +131,7 @@ var Pages = {
 	"www.paper.com/bankrupcy" : new PutInSite("www.paper.com", {
 		"article" : [
 			new Header([new JustText("Conway Bankrupt")], "h2"),
-			new Header([new JustText("Date: 13.06.1864")], "h4"),
+			new Header([new JustText("Date: 13.06.1904")], "h4"),
 			new JustText("Henry Conway was declared bankrupt yesterday. The business mogul, whose "),
 			new Clue("brother George ", "harolds_father_is_bankrupt"),
 			new JustText("is well-known on these pages for his "),
@@ -104,7 +143,7 @@ var Pages = {
 	"www.paper.com/shipwreck" : new PutInSite("www.paper.com", {
 		"article" : [
 			new Header([new JustText("Ships Gone ashore after Storm last night")], "h2"),
-			new Header([new JustText("Date: 11.05.1864")], "h4"),
+			new Header([new JustText("Date: 11.05.1904")], "h4"),
 			new JustText("A ship floated ashore last night. It was scary.")
 		]
 	})
