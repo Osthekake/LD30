@@ -59,7 +59,7 @@ PutInSite.prototype = {
 	asHTML : function(s) {
 		var node_object = this.node_object;
 		var onArticle = function(articleId, container){
-			console.log("Building article " + articleId);
+			//console.log("Building article " + articleId);
 			var nodes = node_object[articleId];
 			for (var i = 0; i < nodes.length; i++) {
 				var node = nodes[i]
@@ -69,7 +69,7 @@ PutInSite.prototype = {
 					console.log("missing node " + articleId + " for article implementation");
 			};
 		};
-		console.log("putting article in site: " + this.siteId);
+		//console.log("putting article in site: " + this.siteId);
 		var site = Sites[this.siteId];
 		var div = document.createElement("div");
 		for (var i = 0; i < site.content.length; i++) {

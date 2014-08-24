@@ -51,7 +51,20 @@ a:visited{
 .centered{
 	text-align: center;
 }
-
+.bar{
+	background: sienna;
+	padding: 5;
+}
+.bar a{
+	color: snow;
+	font-family: monospace;
+	font-weight: bold;
+	padding: 15;
+	margin: 10;
+}
+.bar a:visited{
+	text-decoration: none;
+}
 .bordered{
 	border-style: solid;
 	display: inline-block;
@@ -63,6 +76,8 @@ a:visited{
 }
 .mansion{
 	background: khaki;
+	padding: 10px;
+	margin: 10px;
 }
 .mansion h1{
 	font-family: 'Parisienne', cursive;
