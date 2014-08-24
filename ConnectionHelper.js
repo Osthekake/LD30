@@ -68,7 +68,7 @@ var ConnectionHelper = {
 	render : function(){
 		var ctx = ConnectionHelper.ctx;
 		ctx.fillStyle = "black";
-		ctx.fillRect(0, 0, 400, 400);
+		ctx.fillRect(0, 0, 500, 600);
 		for(var cid in Connections){
 			var connection = Connections[cid];
 			if(!connection.solved){
