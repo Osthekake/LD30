@@ -204,9 +204,47 @@ var Pages = {
 			),
 			new StyledDiv([
 				new Paragraph([new JustText("Finished my painting! The folly looks so beautiful at sunset!")]),
-				new Paragraph ([new Link("Freddy Fitzcharles", "www.facespace.com/freddyf"), new JustText (" likes this.")])
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
 			),
+			new StyledDiv([
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" Where are you? You keep disappearing! xx")]),
+				new StyledDiv([
+					new link("Frederick Fitzcharles", "www.facespace.com/fredf"),
+					new JustText("Sorry darling, I've been busy working on a surprise. TTYL")
+					], "facehistory"
+				)
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("I love my little sisters! They're so talented!")]),
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" likes this.")])
+				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this")])
+				new Paragraph([new Link("Anna Conway", "www.facespace.com/annac"), new JustText(" likes this")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Loved Anna's singing last night! Voice of an angel!")]),
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
+				new Paragraph([new Link("Anna Conway", "wwww.facespace.com/annac"), new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Painting the folly today with the new paints Daddy gave me!")]),
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
+				new Paragraph([new Link("George Conway", "wwww.facespace.com/georgec"), new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Love my new necklace!!")]),
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Really looking forward to seeing my darling Freddy tonight!! xoxoxoxo")]),
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
+				], "facehistory"
+			)
 		]
 	}),
 	"www.facespace.com/haroldc" : new PutInSite("www.facespace.com", {
