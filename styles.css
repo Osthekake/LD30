@@ -95,3 +95,22 @@ a:visited{
 	padding:0;
 	margin:0;
 }
+.facehead{
+	background-image: url(img/bar.png);
+	background-repeat: repeat-x; 
+}
+.facehead h1{
+	color:white;
+	margin: 0;
+	padding: 0;
+}
+.facehistory{
+	margin-left: auto;
+    margin-right: auto;
+	width:80%;
+	background: white;
+}
+.face {
+	background: gainsboro;
+	float: center;
+}

@@ -108,6 +108,7 @@ Header.prototype = {
 	asHTML : function(s) {
 		var p = document.createElement(this.type);
 		for (var i = 0; i < this.nodes.length; i++) {
+			//console.log(this.nodes[i]);
 			p.appendChild(this.nodes[i].asHTML(s));
 		};
 		return p;

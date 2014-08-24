@@ -7,7 +7,7 @@ Sites = {
 					[
 						new JustText("Inbox:<br/>"),
 						new JustText("1 new mail<br/>"),
-						new Link("Call to duty<br/>", "www.letters.com/1")
+						new Link("Call of duty<br/>", "www.letters.com/1")
 					],
 					"left-box"
 				),
@@ -37,6 +37,18 @@ Sites = {
 		],
 		style : "mansion"
 	},
+	"www.facespace.com" : {
+		content : [
+			new StyledDiv([
+				new Header([new JustText("Facespace")]),
+				new StyledDiv([new JustText("All the kings subjects.")], undefined, "font-family: 'Parisienne', cursive;")
+			], "facehead"),
+			new StyledDiv([
+				new Article("face")		
+			])
+		],
+		style : "face"
+	}
 }
 
 var Pages = {
@@ -97,7 +109,7 @@ var Pages = {
 	"www.beuly-house.com/contact" : new PutInSite("www.beuly-house.com", {
 		"mansion" : [
 			new Header([new JustText("Contact information:")], "h2"),
-			new Paragraph([new JustText("George Conway: george@beuly-house.com")])
+			new Paragraph([new Link("George Conway", "www.facespace.com/georgec"), new JustText(": george@beuly-house.com")])
 		]
 	}),
 	"www.beuly-house.com/positions" : new PutInSite("www.beuly-house.com", {
@@ -120,6 +132,26 @@ var Pages = {
 			new Header([new JustText("The Beauly Mansion")], "h2"),
 			new Paragraph([new JustText("We have many floors.")]),
 			new Paragraph([new JustText("Contact the Weatherbys for a tour of the grounds")]),
+		]
+	}),
+	"www.facespace.com/georgec" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("George Conway")], "h2"),
+			new JustText("Social status: Married to "), new Link("Anne Beauly", "www.facespace.com/anneb"),
+			new StyledDiv([
+				new Paragraph([new JustText("George Conway went fishing. (22.6.1904)<br/>"), new JustText("Harold Conway likes this.")])
+				], "facehistory"
+			)
+		]
+	}),
+	"www.facespace.com/anneb" : new PutInSite("www.facespace.com", {
+		"face" : [
+			new Header([new JustText("Anne Beauly")], "h2"),
+			new JustText("Social status: Married to "), new Link("George Conway", "www.facespace.com/georgec"),
+			new StyledDiv([
+				new Paragraph([new JustText("no recent events.")])
+				], "facehistory"
+			)
 		]
 	}),
 	"404" : {
