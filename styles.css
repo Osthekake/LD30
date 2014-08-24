@@ -114,3 +114,8 @@ a:visited{
 	background: gainsboro;
 	float: center;
 }
+.notice{
+	border-style: solid;
+	width:200; 
+	float:right
+}

@@ -118,6 +118,6 @@ var ConnectionHelper = {
 		}
 		//text at the bottom
 		if(clickables[clickables.length-1])
-			ctx.fillText(clickables[clickables.length-1].tooltip,30,350);
+			ctx.fillText(clickables[clickables.length-1].tooltip,30,550);
 	}
 };

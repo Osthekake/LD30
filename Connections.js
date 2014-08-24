@@ -1,4 +1,10 @@
 var Connections = {
+	"charles_weatherby_is_dead" : {
+		coords : [5, 0, 5, 1],
+		tooltip : "Charles weatherby is dead."
+	},
+
+
 	"anne_had_an_elder_brother" : {
 		coords : [1, 0, 2, 0],
 		tooltip: "John Beauly was Anne Conway's elder brother."

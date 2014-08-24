@@ -19,6 +19,13 @@ Sites = {
 	"www.paper.com" : {
 		content : [
 			new Header([new JustText("The Paper")]),
+			new JustText("<hr/>"),
+			new StyledDiv([
+				new Header([new JustText("A small notice &dagger;")], "h4"),
+				new Paragraph([new JustText("We regret to annonce "), 
+				new Clue("that Charles Weatherby died", "charles_weatherby_is_dead"), 
+				new JustText(" last night at the age of 25. The burial will be announced at a later date. Our hearts reach out to those who are mourning.")])	
+			], "notice"),
 			new Article("article")
 		],
 		style : "paper"
