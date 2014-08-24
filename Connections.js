@@ -39,6 +39,13 @@ var Connections = {
 		tooltip : "George Conway married into Beauly House through Anne."
 	},
 
+	"anna_lost_knife" : {
+		coords : [9, 7, 8, 8],
+		tooltip : "Anna is missing a sharp object.",
+		onsolved : function(){
+			MailBox.addMail("My letter opener", "www.letters.com/3");
+		}
+	},
 
 	"freddy_motive_to_kill_charles" : {
 		coords : [5, 1, 4, 4],

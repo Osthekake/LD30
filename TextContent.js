@@ -140,6 +140,20 @@ var Pages = {
 		], 
 		reload : true
 	}),
+	"www.letters.com/3" : new PutInSite("www.letters.com", {
+		"letter" : [
+			new JustText("Sent: 25.06.1904<br/>"),
+			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
+			new JustText("From: annac@beauly-house.com<br/>"),
+			new JustText("My letter opener<br/>"),
+			new JustText("------------------------------------<br/><br/>"),
+			new JustText("Hey.<br/>Last night I realised that I'm missing my silver letter opener. "),
+			new JustText("It's very sharp. Do you think it's the weapon that killed Freddy? "),
+			new JustText("Does that mean the killer was in my room? I'm scared!<br/><br/>Anna"),
+			new JustText("<br/><br/>PS: Don't bother replying. I can't open it anyway...")
+		], 
+		reload : true
+	}),
 	"www.beauly-house.com" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new StyledDiv([
@@ -299,7 +313,7 @@ var Pages = {
 			new JustText("Age: 20 "),
 			new JustText("Social status: Single"),
 			new StyledDiv([
-				new Paragraph([new JustText("Has anyone seen my silver letter opener?")])
+				new Paragraph([new JustText("Has anyone seen my "), new Clue("silver letter opener?", "anna_lost_knife")])
 				], "facehistory"
 			),
 			new StyledDiv([
