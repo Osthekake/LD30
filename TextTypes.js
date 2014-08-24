@@ -72,6 +72,7 @@ PutInSite.prototype = {
 		//console.log("putting article in site: " + this.siteId);
 		var site = Sites[this.siteId];
 		var div = document.createElement("div");
+		console.log(this.siteId);
 		for (var i = 0; i < site.content.length; i++) {
 			var element = site.content[i];
 			var containernode = element.asHTML(onArticle);
