@@ -60,10 +60,10 @@ var Pages = {
 	},	
 	"www.letters.com/1" : new PutInSite("www.letters.com", {
 		"letter" : [
-			new JustText("Sent: 24.06.1864<br/>"),
-			new JustText("To: detective@royal.detective.services.uk<br/>"),
-			new JustText("From: imperialguard@edwardroyalcourt.uk<br/>"),
-			new JustText("Subject: Call to duty<br/>"),
+			new JustText("Sent: 24.06.1904<br/>"),
+			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
+			new JustText("From: imperialguard@edwardroyalcourt.gov.uk<br/>"),
+			new JustText("Subject: Call of duty<br/>"),
 			new JustText("------------------------------------<br/><br/>"),
 			new JustText("Dear Sir or Madam<br/><br/>"),
 			new JustText("Mysterious circumstances have occured at "),
@@ -78,7 +78,7 @@ var Pages = {
 			new StyledDiv([
 				new Image("img/mansion.jpg", 250, 200)
 			], "", "float:right;"),
-			new Paragraph([new JustText("Welcome to Beuly House. The home of the Conways.")])
+			new Paragraph([new JustText("Welcome to Beauly House. The home of the Conways.")])
 		],
 		style : "mansion"
 	},
@@ -92,7 +92,7 @@ var Pages = {
 	"www.paper.com/bankrupcy" : new PutInSite("www.paper.com", {
 		"article" : [
 			new Header([new JustText("Conway Bankrupt")], "h2"),
-			new Header([new JustText("Date: 13.06.1864")], "h4"),
+			new Header([new JustText("Date: 13.06.1904")], "h4"),
 			new JustText("Henry Conway was declared bankrupt yesterday. The business mogul, whose "),
 			new Clue("brother George ", "harolds_father_is_bankrupt"),
 			new JustText("is well-known on these pages for his "),
@@ -103,9 +103,10 @@ var Pages = {
 	}),
 	"www.paper.com/shipwreck" : new PutInSite("www.paper.com", {
 		"article" : [
-			new Header([new JustText("Ships Gone ashore after Storm last night")], "h2"),
-			new Header([new JustText("Date: 11.05.1864")], "h4"),
-			new JustText("A ship floated ashore last night. It was scary.")
+			new Header([new JustText("Ships Washed Ashore After Fierce Storm")], "h2"),
+			new Header([new JustText("Date: 11.05.1904")], "h4"),
+			new JustText("Following an unseasonable gale, several ships and small boat were found washed ashore down the coast, having been ripped away from their moorings in the night.<br/>"),
+			new JustText("All of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth.")
 		]
 	})
 }
