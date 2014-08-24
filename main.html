@@ -7,12 +7,14 @@
         <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
         <script type="text/javascript" src="Connections.js"></script>
         <script type="text/javascript" src="ConnectionHelper.js"></script>
+        <script type="text/javascript" src="Mail.js"></script>
         <script type="text/javascript" src="TextTypes.js"></script>
         <script type="text/javascript" src="TextContent.js"></script>
         <script type="text/javascript" src="PageHelper.js"></script>
     </head>
     <body style="background:black;">
     	<div id="browser" style="float:left; width: 700px;">
+    		<img id="mailicon" src="img/Mail.png" style="position:fixed; top:10; left:690;"></img>
     		<div style="background:white; border-style:inset; border-width:3px; margin:10px; padding:0;">
     			<img src="img/back.png" id="back" width="30" height="30" style="position:absolute; top:15; left:15;"></img>
     			<input type="text" size="100" id="address" rows="1" style="border-style:none; padding: 0 0 0 30px; margin:0;"></input>
@@ -31,6 +33,7 @@
 	    	var canvas = document.getElementById("connections");
 	    	var ctx = canvas.getContext("2d");
 	    	ConnectionHelper.init(ctx);
+	    	MailBox.init(document.getElementById("mailicon"));
 	    	PageHelper.init(document.getElementById("page"), document.getElementById("address"));
 	    	PageHelper.loadPage("about:game");
 	    	document.getElementById("cycle").onclick = function(){ConnectionHelper.cycleHighlight();};

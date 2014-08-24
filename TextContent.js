@@ -6,8 +6,8 @@ Sites = {
 				new StyledDiv(
 					[
 						new JustText("Inbox:<br/>"),
-						new JustText("1 new mail<br/>"),
-						new Link("Call of duty<br/>", "www.letters.com/1")
+						MailBox,
+						new JustText("Sent"),
 					],
 					"left-box"
 				),
@@ -70,6 +70,7 @@ var Pages = {
 				new JustText("* Click on clues to build a case.<br/>"),
 				new JustText("* Click on links to navigate around, or:<br/>"),
 				new JustText("* Enter urls in the bar above.<br/>"),
+				new JustText("* Remember to read your mails.<br/>"),
 				new StyledDiv([new Link("Start Game", "www.letters.com/1")], "bordered")
 			], "centered")
 		],
@@ -93,6 +94,12 @@ var Pages = {
 		],
 		style : "scroogle"
 	},	
+	"www.letters.com" : new PutInSite("www.letters.com", {
+		"letter" : [
+			new JustText("Select a mail on the left")
+		], 
+		reload : true
+	}),
 	"www.letters.com/1" : new PutInSite("www.letters.com", {
 		"letter" : [
 			new JustText("Sent: 24.06.1904<br/>"),
@@ -105,7 +112,19 @@ var Pages = {
 			new Link("Beauly House.", "www.scroogle.com/Beauly%20House"),
 			new JustText(" Your special investigative skills, and unique intelligence resources are required. Commence investigation immediately.<br/><br/>"),
 			new JustText("E<br/>")
-		]			
+		], 
+		reload : true			
+	}),
+	"www.letters.com/2" : new PutInSite("www.letters.com", {
+		"letter" : [
+			new JustText("Sent: 24.06.1904<br/>"),
+			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
+			new JustText("From: coroner@edwardroyalcourt.gov.uk<br/>"),
+			new JustText("Subject: Coroners report<br/>"),
+			new JustText("------------------------------------<br/><br/>"),
+			new JustText("Dead body")
+		], 
+		reload : true
 	}),
 	"www.beauly-house.com" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [

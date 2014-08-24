@@ -72,12 +72,15 @@ PutInSite.prototype = {
 		//console.log("putting article in site: " + this.siteId);
 		var site = Sites[this.siteId];
 		var div = document.createElement("div");
-		console.log(this.siteId);
+		//console.log(this.siteId);
 		for (var i = 0; i < site.content.length; i++) {
 			var element = site.content[i];
 			var containernode = element.asHTML(onArticle);
+			//console.log(containernode);
 			div.appendChild(containernode);
 		};
+		if(node_object.reload)
+			div.reload = true;	
 		div.ztyle = site.style;
 		return div;
 	}

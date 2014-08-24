@@ -16,6 +16,8 @@ var ConnectionHelper = {
 	},
 	solve : function(id){
 		var c = Connections[id];
+		if(c.onsolved && !c.solved)
+			c.onsolved();
 		c.solved = true;
 		console.log("making " + id+ " clickable");
 		clickables.push(c);
@@ -44,6 +46,8 @@ var ConnectionHelper = {
 				}
 			}
 			console.log("parent solved for some reason.");
+			if(parent.onsolved && !parent.solved)
+				parent.onsolved();
 			parent.solved = true;
 			clickables.push(parent);
 			if(parent.parent)

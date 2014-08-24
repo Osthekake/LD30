@@ -1,7 +1,10 @@
 var Connections = {
 	"freddy_is_dead" : {
-		coords : [5, 10, 5, 11],
-		tooltip : "Frederick Fitzcharles is dead."
+		coords : [8, 6, 8, 7],
+		tooltip : "Frederick Fitzcharles is dead.",
+		onsolved : function(){
+			MailBox.addMail("Coroners Report", "www.letters.com/2");
+		}
 	},
 
 	//connections for charles is heir:
@@ -41,7 +44,7 @@ var Connections = {
 		coords : [5, 3, 4, 4],
 	},
 	
-	
+
 
 	"jane_and_anne_have_same_last_name" : {
 		coords : [2, 0, 2, 1],

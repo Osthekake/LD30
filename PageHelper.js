@@ -28,6 +28,9 @@ var PageHelper = {
 				var article = page.asHTML();
 				page.element = article;
 				page.style = article.ztyle;
+				if(article.reload)
+					page.reload = article.reload;
+
 				//console.log(page);
 				//console.log(page.element);
 			}else{
@@ -49,7 +52,12 @@ var PageHelper = {
 		historyStack.push(PageHelper.addressfield.value);
 		PageHelper.addressfield.value = pageid;
 		var page = Pages[pageid];
+		//console.log(page);
 		document.getElementById("body").className = page.style;
+		if(page.reload){
+			console.log("reloaded " + pageid);
+			page.element = page.asHTML();
+		}
 		PageHelper.container.className = page.style;
 		var current = PageHelper.container.childNodes[0];
 		if(current){
