@@ -41,7 +41,7 @@ Sites = {
 		content : [
 			new StyledDiv([
 				new Header([new JustText("Facespace")]),
-				new StyledDiv([new JustText("All the kings' subjects.")], undefined, "font-family: 'Parisienne', cursive;")
+				new StyledDiv([new JustText("All the kings subjects.")], undefined, "font-family: 'Parisienne', cursive;")
 			], "facehead"),
 			new StyledDiv([
 				new Article("face")		
@@ -130,7 +130,7 @@ var Pages = {
 	"www.beauly-house.com/location" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("The Beauly Mansion")], "h2"),
-			new Paragraph([new JustText("We have many floors.")]),
+			new Paragraph([new JustText("Three floors of treasures collected by generations of Beaulys.")]),
 			new Paragraph([new JustText("Contact the Weatherbys for a tour of the grounds")]),
 		]
 	}),
@@ -225,7 +225,7 @@ var Pages = {
 			new JustText("Age: 17 "),
 			new JustText("Social status: Single"),
 			new StyledDiv([
-				new Paragraph([new JustText("Has no recent events.")])
+				new Paragraph([new JustText("no recent events.")])
 				], "facehistory"
 			)
 		]
