@@ -157,7 +157,7 @@ var Pages = {
 	"www.beauly-house.com" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new StyledDiv([
-				new Image("img/mansion.jpg", 250, 200)
+				new MImage("img/mansion.jpg", 250, 200)
 			], "", "float:right;"),
 			new Paragraph([new JustText("Welcome to Beauly House. The home of the Conways.")])
 		]
@@ -459,7 +459,7 @@ var Pages = {
 			new Header([new JustText("Date: 11.05.1904")], "h4"),
 			new JustText("Following an unseasonable gale, several ships and small boat were found washed ashore down the coast, having been ripped away from their moorings in the night.<br/>"),
 			new JustText("All of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth.<br/>"),
-			new Image("img/women.jpg", 150, 250),
+			new MImage("img/women.jpg", 150, 250),
 			new JustText("<br/>(in the picture:) Anne Conway and "),
 			new Clue("her three daughters", "anne_has_only_daughters"),
 			new JustText(" are looking at the ships.")

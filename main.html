@@ -26,18 +26,21 @@
     	<div style="float:right; border-style:inset; border-width:5px;">
     		<img src="img/cycle.png" id="cycle" style="position:fixed; top:7;"></img>
 	    	<canvas id="connections" width="500" height="600">
-	    		connections go here
 	    	</canvas>
 	    </div>
 	    <script>
 	    	var canvas = document.getElementById("connections");
 	    	var ctx = canvas.getContext("2d");
-	    	ConnectionHelper.init(ctx);
-	    	MailBox.init(document.getElementById("mailicon"));
-	    	PageHelper.init(document.getElementById("page"), document.getElementById("address"));
-	    	PageHelper.loadPage("about:game");
-	    	document.getElementById("cycle").onclick = function(){ConnectionHelper.cycleHighlight();};
-	    	document.getElementById("back").onclick = function(){PageHelper.back();};
+	    	var house =  new Image();
+	    	house.onload = function(){
+		    	ConnectionHelper.init(ctx, house);
+		    	MailBox.init(document.getElementById("mailicon"));
+		    	PageHelper.init(document.getElementById("page"), document.getElementById("address"));
+		    	PageHelper.loadPage("about:game");
+		    	document.getElementById("cycle").onclick = function(){ConnectionHelper.cycleHighlight();};
+		    	document.getElementById("back").onclick = function(){PageHelper.back();};
+		    }
+		    house.src = "img/house.png";
 	    </script>
     </body>
 </html>

@@ -11,7 +11,7 @@ function Paragraph(nodes){
 	this.nodes = nodes;
 }
 
-function Image(src, width, height){
+function MImage(src, width, height){
 	this.src = src;
 	this.width = width;
 	this.height = height;
@@ -96,7 +96,7 @@ Paragraph.prototype = {
 	}
 }
 
-Image.prototype = {
+MImage.prototype = {
 	asHTML : function(s) {
 		var img = document.createElement('img');
 		img.src = this.src;

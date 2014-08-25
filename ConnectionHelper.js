@@ -1,7 +1,7 @@
 var clickables = []
 
 var ConnectionHelper = {
-	init : function(ctx){
+	init : function(ctx, house){
 		for(var connectionId in Connections){
 			var connection = Connections[connectionId];
 			
@@ -17,6 +17,7 @@ var ConnectionHelper = {
 			}
 		}
 		ConnectionHelper.ctx = ctx;
+		ConnectionHelper.house = house;
 		ConnectionHelper.render();
 	},
 	solve : function(id){
@@ -76,8 +77,8 @@ var ConnectionHelper = {
 	},
 	render : function(){
 		var ctx = ConnectionHelper.ctx;
-		ctx.fillStyle = "black";
-		ctx.fillRect(0, 0, 500, 600);
+		ctx.clearRect(0, 0, 500, 600);
+		ctx.drawImage(ConnectionHelper.house, 0, 0, 500, 600);
 		for(var cid in Connections){
 			var connection = Connections[cid];
 			if(!connection.solved){
