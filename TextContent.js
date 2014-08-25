@@ -87,7 +87,7 @@ var Pages = {
 				new JustText("The home of the Conways...<br/>")
 			]),
 			new Paragraph([
-				new Header([new Link("Conway Bankrupt", "www.paper.com/bankrupcy")], "h3"),
+				new Header([new Link("Conway Bankrupt", "www.paper.com/bankruptcy")], "h3"),
 				new StyledDiv([new Link("www.paper.com/bankrupcy", "www.paper.com/bankrupcy")], "small"),
 				new JustText("The paper is your go-to place for all news...<br/>")
 			]),
