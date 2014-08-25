@@ -1,7 +1,7 @@
 Sites = {
 	"www.letters.com" : {
 		content : [
-			new Header([new JustText("Your mail, your honor.")]),
+			new Header([new JustText("Your mail, your honour.")]),
 			new StyledDiv([
 				new StyledDiv(
 					[
@@ -23,9 +23,9 @@ Sites = {
 			new StyledDiv([
 				new Header([new JustText("A small notice &dagger;")], "h4"),
 				new Paragraph([
-					new JustText("We regret to annonce "), 
-					new Clue("that Frederick Fitzcharles died", "freddy_is_dead"), 
-					new JustText(" last night at the age of 25. The burial will be announced at a later date. Our hearts reach out to those who are mourning.")
+					new JustText("We regret to announce "), 
+					new Clue("the unexpected death of Lord Frederick Fitzcharles", "freddy_is_dead"), 
+					new JustText(" last night at the age of 25. Funeral arrangements will be announced at a later date. Our hearts reach out to those who are mourning.")
 				])	
 			], "notice"),
 			new Article("article")
@@ -50,7 +50,7 @@ Sites = {
 		content : [
 			new StyledDiv([
 				new Header([new JustText("Facespace")]),
-				new StyledDiv([new JustText("All the kings subjects.")], undefined, "font-family: 'Parisienne', cursive;")
+				new StyledDiv([new JustText("All the King's subjects.")], undefined, "font-family: 'Parisienne', cursive;")
 			], "facehead"),
 			new StyledDiv([
 				new Article("face")		
@@ -101,7 +101,7 @@ var Pages = {
 	},	
 	"www.letters.com" : new PutInSite("www.letters.com", {
 		"letter" : [
-			new JustText("Select a mail on the left")
+			new JustText("Select an email on the left")
 		], 
 		reload : true
 	}),
@@ -125,7 +125,7 @@ var Pages = {
 			new JustText("Sent: 25.06.1904<br/>"),
 			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
 			new JustText("From: coroner@edwardroyalcourt.gov.uk<br/>"),
-			new JustText("Subject: Coroners report<br/>"),
+			new JustText("Subject: Coroner's report<br/>"),
 			new JustText("------------------------------------<br/><br/>"),
 			new JustText("The deceased ("), new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
 			new JustText(") died from being "), 
@@ -159,7 +159,7 @@ var Pages = {
 			new StyledDiv([
 				new MImage("img/mansion.jpg", 250, 200)
 			], "", "float:right;"),
-			new Paragraph([new JustText("Welcome to Beauly House. The home of the Conways.")])
+			new Paragraph([new JustText("Welcome to Beauly House, the ancestral home of the Beauly family since the reign of Queen Elizabeth.")])
 		]
 	}),
 	"www.beauly-house.com/contact" : new PutInSite("www.beauly-house.com", {
@@ -171,7 +171,7 @@ var Pages = {
 	"www.beauly-house.com/positions" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("Currently hiring:")], "h2"),
-			new Paragraph([new Header([new JustText("Housemaid")], "h3"), new JustText("Clean, moral girl with good loyalty.")]),
+			new Paragraph([new Header([new JustText("Housemaid")], "h3"), new JustText("Clean, moral girl with loyal disposition and good work ethic.")]),
 			new Paragraph([new Header([new JustText("Gardener")], "h3"), new JustText("Self sufficient and skilled gardener with clean past.")]),
 			new Paragraph([new JustText("Contact via mail for more information.")]),
 		]
@@ -186,8 +186,10 @@ var Pages = {
 	"www.beauly-house.com/location" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("The Beauly Mansion")], "h2"),
-			new Paragraph([new JustText("Three floors of treasures collected by generations of Beaulys.")]),
-			new Paragraph([new JustText("Contact the Weatherbys for a tour of the grounds")]),
+			new Paragraph([new JustText("The original manor house has been much improved on over the years, but original fittings can still be seen in the kitchens and at the rear of the house.")]),
+			new Paragraph([new JustText("Much of the reconstruction of the house was completed by J. Michael Beauly, the great-uncle of Anne Conway (née Beauly), who was much inspired by the architectural styes of New England in his journeys to the United States. Beauy House is the only surviving example of his unique style; he built four other houses in the county, but all of them have since been lost to fire or misadventure. J. Michael Beauly was particularly pleased with Beauly House, and described it as his last and greatest work.")]),
+			new Paragraph([new JustText("The grounds are extensive, and boast a unique folly constructed by John Henry Beauly and his wife Marie Cameron Beauly in 1746. Built before the fashion for follies really took off, family lore has it that the Beaulys started the craze for such features, whilst local lore has it that Marie Cameron Beauly, a noted Jacobite, had the gold she was hoarding for Bonnie Prince Charlie"), new Clue(" buried beneath it", "gold_buried_under_folly"), new JustText(", vowing that no-one should have it if he did not.")]),
+			new Paragraph([new JustText("Contact the housekeeper"). new Link(" Mrs Blackwood", "www.facespace.com/aliceb"), new JustText(" for a tour of the house and grounds.")]),
 		]
 	}),
 	"www.facespace.com/georgec" : new PutInSite("www.facespace.com", {
