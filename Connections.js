@@ -9,7 +9,7 @@ var Connections = {
 		coords : [4, 0, 4, 1],
 		tooltip : "Frederick Fitzcharles is dead.",
 		onsolved : function(){
-			MailBox.addMail("Coroner", "www.letters.com/2");
+			MailBox.addMail("Coroner", "www.letters.com/coroner");
 		}
 	},
 
@@ -20,12 +20,12 @@ var Connections = {
 	"freddy_struggled" : {
 		coords : [4, 7, 4, 8],
 		tooltip : "Frederick Fitzcharles died in a struggle.",
-	},
+	},/*
 	"charles_no_alibi" : {
 		coords : [2, 6, 4, 8],
 		tooltip : "Charles has no alibi for the time when Freddy was murdered.",
 		children : []//need subconnections for this I guess?
-	},
+	},*/
 	"charles_means" : {
 		coords : [7, 7, 4, 8],
 		tooltip : "Charles had the means to kill Freddy.",
@@ -37,32 +37,48 @@ var Connections = {
 		children : ["freddy_motive_to_kill_charles", "charles_was_with_freddy", "freddy_had_a_gun"]
 	},
 
-	"charles_was_with_freddy" : { //*
+	"anna_has_alibi" : {
+		coords : [5, 0, 5, 1],
+		tooltip : "Anna was playing cards at the time of the murder"
+	},
+
+	"charles_was_with_freddy" : {
 		coords : [5, 6, 4, 7],
 		tooltip : "Charles was meeting Freddy before he died."
 	},
 	"charles_killed_freddy" : {
 		coords : [4, 8, 4, 10],
 		tooltip : "Charles killed Freddy in self-defense.",
-		children : ["charles_means", "charles_no_alibi", "freddy_tried_to_kill_charles"]
+		children : ["charles_means", "freddy_tried_to_kill_charles", "rosie_mother_not_killer", "anna_has_alibi"],
+		onsolved : function(){
+			MailBox.addMail("Solved", "www.letters.com/solved");
+		}
 	},
 
 	//connections for charles is heir:
 	"charles_is_heir_to_beauly": {
 		coords : [6, 1, 6, 4],
 		tooltip : "Chales Weatherby is the heir to Beauly House.",
-		children : ["charles_is_johns_son", "anne_had_an_elder_brother", "anne_has_only_daughters", "george_inherited_through_anne"]
+		children : ["charles_is_johns_son", "johns_child_precedence_over_anne", "george_inherited_through_anne"]
 	},
-	"charles_is_johns_son" : { //*
-		coords : [7, 1, 7, 2],
-		tooltip : "Charles Weatherby is the natural son of John Beauly." //relates to jane_loves_charles
-	},
-	"anne_had_an_elder_brother" : { //*
+	"johns_child_precedence_over_anne" : {
 		coords : [6, 1, 7, 2],
+		tooltip : "John's child inherits Beauly House before Anne." // relates to charles_is_heir_to_beauly
+	},
+	"charles_conceived_out_of_wedlock" : {
+		coords : [7, 0, 6, 1],
+		tooltip : "Charles was conceived before his parents got married." // relates to charles_is_johns_son
+	},
+	"charles_is_johns_son" : {
+		coords : [7, 2, 7, 3],
+		tooltip : "Charles Weatherby is the spitting image of John Beauly.",
+	},
+	"anne_had_an_elder_brother" : {
+		coords : [6, 0, 6, 1],
 		tooltip: "John Beauly was Anne Conway's elder brother."
 	},
 	"anne_has_only_daughters" : {
-		coords : [7, 2, 7, 3],
+		coords : [8, 2, 7, 3],
 		tooltip : "All of Anne's children are girls."
 	},
 	"george_inherited_through_anne" : { 
@@ -74,7 +90,7 @@ var Connections = {
 		coords : [5, 1, 4, 2],
 		tooltip : "Anna is missing a sharp silver letter opener.",
 		onsolved : function(){
-			MailBox.addMail("Weapon", "www.letters.com/3");
+			MailBox.addMail("Weapon", "www.letters.com/weapon");
 		}
 	},
 
@@ -96,42 +112,51 @@ var Connections = {
 		tooltip : "Georgia has a motive to kill Frederick.",
 		children : ["freddy_sleeping_with_rosie", "georgia_knows_freddys_secret"]
 	},
-	"georgia_alibi" : { //*
+	"georgia_alibi" : {
 		coords : [5, 5, 7, 6],
-		tooltip : "Georgia was shouting at Rosie at the time of the murder.",
-		children : ["georgia_rosie_argument", "anne_overhears_argument"]
+		tooltip : "Jane was watching Georiga paint at the time of the murder."
 	},
 	"georgia_found_knife" : {
 		coords : [7, 6, 7, 7],
 		tooltip : "Georgia found the letter opener, and gave it to Charles."
 	},
 	"rosie_mother_motive" : {
-		coords : [3, 3, 3, 6],
+		coords : [3, 3, 2, 4],
 		tooltip : "Alice Blackwood has a motive to kill Frederick.",
 		children : ["freddy_sleeping_with_rosie", "rosie_mother_knows_freddys_secret"]
 	},
-	"rosie_mother_not_fighter" : {//*
-		coords : [3, 6, 4, 7],
-		tooltip : "Alice Blackwood is not capable of fighting a grown man."
+	"rosie_mother_alibi" : {//*
+		coords : [2, 4, 4, 7],
+		tooltip : "Alice Blackwood was scolding Rosie at the time of the murder.",
+		children : ["alice_rosie_argument", "anne_overhears_argument"]
+	},
+	"alice_rosie_argument" : {
+		coords : [2, 5, 4, 7],
+		tooltip : "Georgia and Rosie were arguing at the time of the murder." // relates to georgia_alibi
+	},
+	"anne_overhears_argument" : {
+		coords : [2, 4, 2, 5],
+		tooltip : "Anne heard shouting." // relates to georgia_alibi
 	},
 	"rosie_mother_not_killer" : {
 		coords : [3, 3, 4, 7],
 		tooltip : "Alice Blackwood did not kill Freddy.",
-		children : ["rosie_mother_motive", "rosie_mother_not_fighter"]
+		children : ["rosie_mother_motive", "rosie_mother_alibi"]
 	},
 
-	"freddy_sleeping_with_rosie" : { //*
+	"freddy_sleeping_with_rosie" : { 
 		coords : [4, 2, 3, 3],
-		tooltip : "Freddy has been having an affair with Rosie." // relates to georgia_engaged_to_freddy
+		tooltip : "Freddy has been having an affair with Rosie.", // relates to georgia_engaged_to_freddy
+		children: ["rosie_mother_knows_freddys_secret"]
 	},
-	"georgia_knows_freddys_secret" : { //*
-		coords : [3, 3, 5, 5],
+	"georgia_knows_freddys_secret" : { 
+		coords : [4, 4, 5, 5],
 		tooltip : "Georgia knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
 	},
-	"rosie_mother_knows_freddys_secret" : { //*
+	"rosie_mother_knows_freddys_secret" : { 
 		coords : [2, 2, 3, 3],
 		tooltip : "Alice Blackwood knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
-	},
+	},/*
 	"anna_loves_tall_mary" : {
 		coords : [1, 3, 1, 4],
 		tooltip : "Anna and Tall Mary are in a relationship." // relates to tall_mary_loves_anna, freddy_and_anna_mad
@@ -159,37 +184,29 @@ var Connections = {
 	"anne_addicted_to_laudanum" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "Anne is addicted to laudanum."
-	},
+	},*/
 	"rosie_lazy" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Rosie's laziness goes unpunished by her mother."
+		coords : [1, 6, 1, 7],
+		tooltip : "Rosie's laziness goes unpunished by her mother.",
+		onsolved : function(){
+			MailBox.addMail("Go away", "www.letters.com/leave");
+		}
 	},
 	"drawing_room_not_cleaned" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "The Drawing Room has not been cleaned properly." // relates to rosie_lazy, georgia_finds_knife
+		coords : [1, 5, 1, 6],
+		tooltip : "The Drawing Room has not been cleaned properly." // relates to rosie_lazy, georgia_found_knife
 	},
 	"freddy_financial_troubles" : {
-		coords : [0, 0, 0, 0],
+		coords : [3, 1, 4, 2],
 		tooltip : "Freddy's family was having financial difficulty." // relates to freddy_motive_to_kill_charles
 	},
 	"gold_buried_under_folly" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Jacobite gold is rumoured to be buried under the folly." // red herring clue!
+		coords : [8, 5, 8, 6],
+		tooltip : "Jacobite gold is rumoured to be buried under the folly.", // red herring clue!
+		onsolved : function(){
+			MailBox.addMail("Article", "www.letters.com/article"); // actually important!
+		}
 	},
-	"johns_child_precedence_over_anne" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "John's child would inherit the Beauly estate over Anne or her children." // relates to charles_is_heir_to_beauly
-	},
-	"charles_conceived_out_of_wedlock" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Charles was conceived before his parents got married." // relates to charles_is_johns_son
-	},
-	"georgia_rosie_argument" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Georgia and Rosie were having a screaming argument at the time of the murder." // relates to georgia_alibi
-	},
-	"anne_overhears_argument" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Anne heard the argument and sent Edward Weatherby to stop it." // relates to georgia_alibi
-	}
+	
+	
 }

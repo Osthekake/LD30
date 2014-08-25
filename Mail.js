@@ -5,7 +5,7 @@ var MailBox = {
 		MailBox.icon = icon;
 		MailBox.element = document.createElement("ul");
 		MailBox.element.className = "mailbox";
-		MailBox.addMail("Call of duty", "www.letters.com/1");
+		MailBox.addMail("Call of duty", "www.letters.com/call");
 		icon.onclick = function(){
 			PageHelper.loadPage("www.letters.com");
 			MailBox.icon.style.display = "none";

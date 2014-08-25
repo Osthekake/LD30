@@ -53,6 +53,8 @@ var PageHelper = {
 		PageHelper.addressfield.value = pageid;
 		var page = Pages[pageid];
 		//console.log(page);
+		if(!page)
+			console.log("Missing page: "+ pageid);
 		document.getElementById("body").className = page.style;
 		if(page.reload){
 			console.log("reloaded " + pageid);

@@ -6,12 +6,14 @@ var ConnectionHelper = {
 			var connection = Connections[connectionId];
 			
 			//todo: remove this line
-			clickables.push(connection);
+			//clickables.push(connection);
 
 			if(connection.children){
 				for (var i = 0; i < connection.children.length; i++) {
 					var child = connection.children[i];
 					//console.log(child);
+					if(!Connections[child])
+						console.log("Missing connection: " + child);
 					Connections[child].parent = connection;
 				}
 			}
@@ -22,6 +24,8 @@ var ConnectionHelper = {
 	},
 	solve : function(id){
 		var c = Connections[id];
+		if(!c)
+			console.log("missing connection " + id);
 		if(c.onsolved && !c.solved)
 			c.onsolved();
 		c.solved = true;

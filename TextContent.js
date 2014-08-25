@@ -64,14 +64,14 @@ var Pages = {
 	"about:game" : {
 		content : [
 			new StyledDiv([
-				new Header([new JustText("Welcome to the game!<br/>")]),
-				new JustText("This is a game made for Ludum Dare 30<br/>"),
+				new Header([new JustText("Connected Worlds<br/>")]),
+				new JustText("This is a game made for Ludum Dare 30<br/> by Osthekake and Kveldsdraum<br/>"),
 				new JustText("Instructions:<br/>"),
 				new JustText("* Click on clues to build a case.<br/>"),
 				new JustText("* Click on links to navigate around, or:<br/>"),
 				new JustText("* Enter urls in the bar above.<br/>"),
 				new JustText("* The green envelope means you have mails. Click it to read your mails!<br/>"),
-				new StyledDiv([new Link("Start Game", "www.letters.com/1")], "bordered")
+				new StyledDiv([new Link("Start Game", "www.letters.com/call")], "bordered")
 			], "centered")
 		],
 		style : "journal"
@@ -105,7 +105,7 @@ var Pages = {
 		], 
 		reload : true
 	}),
-	"www.letters.com/1" : new PutInSite("www.letters.com", {
+	"www.letters.com/call" : new PutInSite("www.letters.com", {
 		"letter" : [
 			new JustText("Sent: 24.06.1904<br/>"),
 			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
@@ -120,7 +120,7 @@ var Pages = {
 		], 
 		reload : true			
 	}),
-	"www.letters.com/2" : new PutInSite("www.letters.com", {
+	"www.letters.com/coroner" : new PutInSite("www.letters.com", {
 		"letter" : [
 			new JustText("Sent: 25.06.1904<br/>"),
 			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
@@ -140,7 +140,7 @@ var Pages = {
 		], 
 		reload : true
 	}),
-	"www.letters.com/3" : new PutInSite("www.letters.com", {
+	"www.letters.com/weapon" : new PutInSite("www.letters.com", {
 		"letter" : [
 			new JustText("Sent: 25.06.1904<br/>"),
 			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
@@ -151,6 +151,52 @@ var Pages = {
 			new JustText("It's very sharp. Do you think it's the weapon that killed Freddy? "),
 			new JustText("Does that mean the killer was in my room? I'm scared!<br/><br/>Anna"),
 			new JustText("<br/><br/>PS: Don't bother replying. I can't open it anyway...")
+		], 
+		reload : true
+	}),
+	"www.letters.com/article" : new PutInSite("www.letters.com", {
+		"letter" : [
+			new JustText("Sent: 25.06.1904<br/>"),
+			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
+			new JustText("From: edwardw@beauly-house.com<br/>"),
+			new JustText("Old Article<br/>"),
+			new JustText("------------------------------------<br/><br/>"),
+			new JustText("I heard you were asking about the old gold stories. I believe this article could be of interest to you:<br/>"),
+			new Link("Old newspaper article", "www.paper.com/archived/1882"),
+			new JustText("<br/><br/>"),
+			new Link("Edward Weatherby", "www.facespace.com/edwardw")
+		], 
+		reload : true
+	}),
+	"www.letters.com/leave" : new PutInSite("www.letters.com", {
+		"letter" : [
+			new JustText("Sent: 25.06.1904<br/>"),
+			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
+			new JustText("From: aliceb@beauly-house.com<br/>"),
+			new JustText("Leave us alone!<br/>"),
+			new JustText("------------------------------------<br/><br/>"),
+			new JustText("I think you police fellows ought to leave us alone. Freddie was no good for anyone. Would you believe "),
+			new Clue("he was havin his way with Rosie?", "rosie_mother_knows_freddys_secret"),
+			new JustText(" Damn upper class! "), new Clue("I told Georgia too", "georgia_knows_freddys_secret"), new JustText(", I did. I think yous police shoulda been here to stop that.<br/><br/>"),
+			new Link("Alice", "www.facespace.com/aliceb")
+		], 
+		reload : true
+	}),
+	"www.letters.com/solved" : new PutInSite("www.letters.com", {
+		"letter" : [
+			new JustText("Sent: 25.06.1904<br/>"),
+			new JustText("To: detective@royal.detective.services.gov.uk<br/>"),
+			new JustText("From: imperialguard@edwardroyalcourt.gov.uk<br/>"),
+			new JustText("Case Solved!<br/>"),
+			new JustText("------------------------------------<br/><br/>"),
+			new JustText("I wish to congratulate you on solving the murder of Frederick Fitzcharles."),
+			new JustText(" As you have deduced, the murderer was Charles Weatherby, heir of House Beauly."),
+			new JustText(" As this was in self defense, his punishment will be mild.<br/><br/>"),
+			new JustText("I thank you for your services.<br/><br/>E<br/><br/>"),
+			new Header([new JustText("Game Over")]),
+			new Header([new JustText("You have been playing")], "h2"),
+			new Header([new JustText("Connected Worlds")]),
+			new JustText("By Osthekake and Kveldsdraum.<br/>Thank you for playing!!!!")
 		], 
 		reload : true
 	}),
@@ -229,15 +275,7 @@ var Pages = {
 			new JustText("Age: 46 "),
 			new JustText("Social status: Married to "), new Link("George Conway", "www.facespace.com/georgec"),
 			new StyledDiv([
-				new Paragraph([new Link("Edward Weatherby", "www.facespace.com/edwardw"), new JustText(" Weatherby, please stop my eldest daughter from shouting at the maid."), new Clue(" They have been at it for half an hour now.", "anne_overhears_argument"), new JustText("My bell can't be heard over the noise and I have a headache.(22.06.1904 21.45)")])
-				], "facehistory"
-			),
-			new StyledDiv([
-				new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" why are you "), new Clue("screming at Rosie?", "georgia_rosie_argument"), new JustText("Did she break something again? You sound like a fishwife. Please stop.(22.06.1904 21.30)")])
-				], "facehistory"
-			),
-			new StyledDiv([
-				new Paragraph([new JustText(")22.06.1904 21.15) Is that an argument? How am I expected to sleep if there is screming?")])
+				new Paragraph([new JustText("(22.06.1904 21.15) "), new Clue("Is that an argument?", "anne_overhears_argument"), new JustText(" How am I expected to sleep if there is screaming?")])
 				], "facehistory"
 			),
 			new StyledDiv([
@@ -246,7 +284,7 @@ var Pages = {
 			),
 			new StyledDiv([
 				new JustText("(12.5.1904) Anne wrote on her brother's wall on his birthday:"),
-				new Paragraph([new JustText("Miss you brother...")])
+				new Paragraph([new Clue("Miss you brother...", "anne_had_an_elder_brother")])
 				], "facehistory"
 			)
 		]
@@ -262,6 +300,14 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
+				new Paragraph([new JustText("(22.06.1904 20.00) What is this silver dagger doing in the drawing room?")]),
+				new StyledDiv([
+					new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new Clue(" Sorry madam, I'll take care of it.", "georgia_found_knife")])
+					], "facehistory"
+				),
+				], "facehistory"
+			),
+			new StyledDiv([
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText("(22.06.1904 18.00) Where are you? You keep disappearing! xx")]),
 				new StyledDiv([
 					new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
@@ -271,7 +317,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("(22.06.1904 10.30)I love my little sisters! They're so talented!")]),
+				new Paragraph([new JustText("(22.06.1904 10.30) I love my little sisters! They're so talented!")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" likes this.")]),
 				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this")]),
 				new Paragraph([new Link("Anna Conway", "www.facespace.com/annac"), new JustText(" likes this")])
@@ -295,7 +341,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText(")19.06.1904 10.00) Really looking forward to seeing my darling Freddy tonight!! xoxoxoxo")]),
+				new Paragraph([new JustText("(19.06.1904 10.00) Really looking forward to seeing my darling Freddy tonight!! xoxoxoxo")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
 			),
@@ -318,6 +364,11 @@ var Pages = {
 					new Link("Anna Conway", "www.facespace.com/annac"),
 					new JustText(" Totally!")
 					], "facehistory"
+				),
+				new StyledDiv([
+					new Link("Harold Conway", "www.facespace.com/haroldc"),
+					new JustText(" Just you and me. Freddy doesn't want to.")
+					], "facehistory"
 				)
 				], "facehistory"
 			)
@@ -336,7 +387,15 @@ var Pages = {
 					], "facehistory"
 				)
 				], "facehistory"
-			)
+			), 
+			new StyledDiv([
+				new Paragraph([new JustText("Why are there covered up pictures of "), new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText(" all over the house??")]),
+				new StyledDiv([
+					new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText(" That's not me, that's "), new Clue("Anne's dead brother.", "charles_is_johns_son")]),
+					], "facehistory"
+				),
+				], "facehistory"
+			),
 		]
 	}),
 	"www.facespace.com/annac" : new PutInSite("www.facespace.com", {
@@ -358,7 +417,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("(20.06.1904 22.30)She walks in beauty, like the night<br/>"),
+				new Paragraph([new JustText("(20.06.1904 22.30) She walks in beauty, like the night<br/>"),
 					new JustText("Of cloudless climes and starry skies;<br/>"),
 					new JustText("And all that's best of dark and bright<br/>"),
 					new JustText("Meet in her aspect and her eyes")]),
@@ -376,6 +435,10 @@ var Pages = {
 			new Header([new JustText("Jane Conway")], "h2"),
 			new JustText("Age: 17 "),
 			new JustText("Social status: Single"),
+			new StyledDiv([
+				new Paragraph([new Clue("(22.06.1904 21.30)", "georgia_alibi"), new JustText(" watching "), new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" paint. She's really good!")])
+				], "facehistory"
+			),
 			new StyledDiv([
 				new Paragraph([new JustText("another argument with parents. old people are so stupid.")])
 				], "facehistory"
@@ -468,7 +531,7 @@ var Pages = {
 				new Paragraph([new JustText("I love my coworkers so much, they're such stars.")]),
 				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText (" likes this.")]),
 				new Paragraph([new Link("Rosie Blackwood", "www.facespace.com/rosieb"), new JustText (" likes this.")]),
-				new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charles w"), new JustText (" likes this.")]),
+				new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText (" likes this.")]),
 				new Paragraph([new Link("Mary Weatherby", "www.facespace.com/maryw"), new JustText (" likes this.")])
 				], "facehistory"
 			),
@@ -487,12 +550,7 @@ var Pages = {
 					new JustText(" you ok hun?")
 					], "facehistory"
 				)
-<<<<<<< HEAD
-				], "facehistory"
-			),
-=======
 			], "facehistory"),
->>>>>>> origin/master
 			new StyledDiv([
 				new Paragraph([new JustText("Didn't have enough time for breakfast and I'm really suffering for it.")])
 				], "facehistory"
@@ -509,6 +567,10 @@ var Pages = {
 			new JustText("Age: 16 "),
 			new JustText("Social status: single "),
 			new JustText("Works as: housemaid at Beauly House"),
+			new StyledDiv([
+				new Paragraph([new JustText("(22.06.1904 22:00) "), new Link("mom", "www.facespace.com/aliceb"), new JustText(" just shouted at me for like "), new Clue("an hour", "alice_rosie_argument"), new JustText(". god.")])
+				], "facehistory"
+			),
 			new StyledDiv([
 				new Paragraph([new JustText("oops think sum1 saw us lol")])
 				], "facehistory"
@@ -530,7 +592,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("was i suposed 2 "), new clue("clean the drawin rm", "drawing_room_not_cleaned"), new JustText("or the dinin rm cant rember lol")]),
+				new Paragraph([new JustText("was i suposed 2 "), new Clue("clean the drawin rm", "drawing_room_not_cleaned"), new JustText("or the dinin rm cant rember lol")]),
 				new StyledDiv([
 					new Link("Mary Tallman", "www.facespace.com/maryt"),
 					new JustText(" Both. hurry it up.")
@@ -600,7 +662,11 @@ var Pages = {
 			new JustText("Social status: Single "),
 			new JustText("Works as: footman at Beauly House"),
 			new StyledDiv([
-				new Paragraph([new JustText("no recent events.")])
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" (22.06.1906 21:00) "), new Clue("Could you come and look at something?", "charles_was_with_freddy"), new JustText(" And tell that woman to shut up.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Did you forget to clean the drawing room today, "), new Link("Rosie?", "www.facespace.com/rosieb")])
 				], "facehistory"
 			)
 		]
@@ -636,7 +702,7 @@ var Pages = {
 			new JustText("Social status: Widowed "),
 			new JustText("Works as: housekeeper at Beauly House"),
 			new StyledDiv([
-				new Paragraph([new JustText("no recent events.")])
+				new Paragraph([new JustText("Eat your breakfast "), new Link("Rosie", "www.facespace.com/rosieb"), new JustText(" love..")])
 				], "facehistory"
 			)
 		]
@@ -652,15 +718,12 @@ var Pages = {
 		"article" : [
 			new Header([new JustText("Conway Bankrupt")], "h2"),
 			new Header([new JustText("Date: 13.06.1904")], "h4"),
-			new JustText("Henry Conway was declared bankrupt yesterday. The business mogul, whose "),
-			new Clue("brother George ", "harolds_father_is_bankrupt"),
-			new JustText("is well-known on these pages for his "),
-			new Clue("business concerns in the Orient, ", "the_Conway_fortune_comes_from_China"),
+			new JustText("Henry Conway was declared bankrupt yesterday. The business mogul, whose brother George "),
+			new JustText("is well-known on these pages for his business concerns in the Orient, "),
 			new JustText("was forced to put his company into administration.<br/><br/>"),
 			new JustText("This is not the first time this week that George Conway's friends and relations have been hit with a financial scandal. His former business partner and close personal friend Charles Fitzcharles, Lord Linmouth, was forced to liquidate several assets in order to meet various obligations. Lord Linmouth's son,"),
 			new Clue(" Lord Frederick Fitzcharles,", "freddy_financial_troubles"),
-			new JustText(" refused to comment when approached by this paper.<br/><br/>"),
-			new Link("?")
+			new JustText(" refused to comment when approached by this paper.<br/><br/>")
 		]
 	}),
 	"www.paper.com/archived/1882" : new PutInSite("www.paper.com", {
@@ -677,8 +740,7 @@ var Pages = {
 			new JustText(" We wish Miss Beauly and Mr Conway the best for their future lives together.<br/><br/>"),
 			new JustText("Finally, we are pleased to announce the birth of a baby boy to Mr and Mrs Edward Weatherby, married six months ago in St Ethelred's Parish Church. Mr Weatherby is known to many in the parish as the head butler at Beauly House. Charles Edward Weatherby was "),
 			new Clue("born early but is a healthy size,", "charles_conceived_out_of_wedlock"),
-			new JustText(" and both mother and baby are doing well.<br/><br/>"),
-			new Link("?")
+			new JustText(" and both mother and baby are doing well.<br/><br/>")
 		]
 	}),
 	"www.paper.com/shipwreck" : new PutInSite("www.paper.com", {
@@ -687,7 +749,7 @@ var Pages = {
 			new Header([new JustText("Date: 11.05.1904")], "h4"),
 			new JustText("Following an unseasonable gale, several ships and small boats were found washed ashore down the coast, having been ripped away from their moorings in the night.<br/>"),
 			new JustText("Conway Enterprises has ensured that all of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth, or George Conway at Beauly House.<br/>"),
-			new MImage("img/women.jpg", 150, 250),
+			new MImage("img/women.jpg", 100, 250),
 			new JustText("<br/>(in the picture:) Anne Conway and "),
 			new Clue("her three daughters", "anne_has_only_daughters"),
 			new JustText(" are looking at the ships.")
