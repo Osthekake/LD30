@@ -18,20 +18,23 @@ a:visited{
 	border-style: solid;
 	display: inline-block;
 	height: 300px;
+	width: 80px;
 	padding: 10px;
 	background: gainsboro;
 }
 .mail {
-	background: sienna;
+	background-image: url(img/desk.jpg);
 	padding: 10px;
 	margin: 10px;
 }
 .mail h1{
 	font-family: oldlondon;
+	padding: 0px;
+	margin: 0px;
 }
 .paper {
 	font-family: monospace;
-	background: khaki;
+	background-image: url(img/paper.jpg);
 	padding: 10px;
 	margin: 10px;
 }
@@ -40,18 +43,30 @@ a:visited{
 }
 .letter {
 	padding: 10px;
-	border-style: solid;
 	width: 500;
 	float: right;
 	display: inline-block;
-	background: khaki;
+	background-image: url(img/letter.jpg);
 	font-family: monospace;
 }
 
 .centered{
 	text-align: center;
 }
-
+.bar{
+	background: sienna;
+	padding: 5;
+}
+.bar a{
+	color: snow;
+	font-family: monospace;
+	font-weight: bold;
+	padding: 15;
+	margin: 10;
+}
+.bar a:visited{
+	text-decoration: none;
+}
 .bordered{
 	border-style: solid;
 	display: inline-block;
@@ -62,7 +77,13 @@ a:visited{
 	cursor: zoom-in;
 }
 .mansion{
-	background: khaki;
+	background-image: url(img/flowers.jpg);
+	padding: 10px;
+	margin: 10px;
+	color: lightyellow;
+}
+.mansion a:visited{
+	color: mintcream;	
 }
 .mansion h1{
 	font-family: 'Parisienne', cursive;
@@ -79,4 +100,35 @@ a:visited{
 .scroogle h3{
 	padding:0;
 	margin:0;
+}
+.facehead{
+	background-image: url(img/bar.png);
+	background-repeat: repeat-x; 
+}
+.facehead h1{
+	color:white;
+	margin: 0;
+	padding: 0;
+}
+.facehistory{
+	margin-left: auto;
+    margin-right: auto;
+	width:80%;
+	background: white;
+}
+.face {
+	background: gainsboro;
+	float: center;
+}
+.notice{
+	border-style: solid;
+	width:200; 
+	float:right;
+	margin: 5;
+	padding: 5;
+}
+ul.mailbox{
+	list-style: none;
+	margin:0;
+	padding:0;
 }

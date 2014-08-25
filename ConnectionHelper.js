@@ -1,21 +1,33 @@
 var clickables = []
 
 var ConnectionHelper = {
-	init : function(ctx){
+	init : function(ctx, house){
 		for(var connectionId in Connections){
 			var connection = Connections[connectionId];
+			
+			//todo: remove this line
+			//clickables.push(connection);
+
 			if(connection.children){
 				for (var i = 0; i < connection.children.length; i++) {
 					var child = connection.children[i];
+					//console.log(child);
+					if(!Connections[child])
+						console.log("Missing connection: " + child);
 					Connections[child].parent = connection;
 				}
 			}
 		}
 		ConnectionHelper.ctx = ctx;
+		ConnectionHelper.house = house;
 		ConnectionHelper.render();
 	},
 	solve : function(id){
 		var c = Connections[id];
+		if(!c)
+			console.log("missing connection " + id);
+		if(c.onsolved && !c.solved)
+			c.onsolved();
 		c.solved = true;
 		console.log("making " + id+ " clickable");
 		clickables.push(c);
@@ -28,8 +40,8 @@ var ConnectionHelper = {
 	},
 	cycleHighlight : function() {
 		var top = clickables.shift();
-		console.log(clickables);
-		console.log(top);
+		//console.log(clickables);
+		//console.log(top);
 		clickables.push(top);
 		ConnectionHelper.render();	
 	},
@@ -44,6 +56,8 @@ var ConnectionHelper = {
 				}
 			}
 			console.log("parent solved for some reason.");
+			if(parent.onsolved && !parent.solved)
+				parent.onsolved();
 			parent.solved = true;
 			clickables.push(parent);
 			if(parent.parent)
@@ -67,8 +81,8 @@ var ConnectionHelper = {
 	},
 	render : function(){
 		var ctx = ConnectionHelper.ctx;
-		ctx.fillStyle = "black";
-		ctx.fillRect(0, 0, 400, 400);
+		ctx.clearRect(0, 0, 500, 600);
+		ctx.drawImage(ConnectionHelper.house, 0, 0, 500, 600);
 		for(var cid in Connections){
 			var connection = Connections[cid];
 			if(!connection.solved){
@@ -117,7 +131,8 @@ var ConnectionHelper = {
 			ConnectionHelper.drawALine(realx1, realy1, realx2, realy2);
 		}
 		//text at the bottom
+		ctx.font="17px Arial";
 		if(clickables[clickables.length-1])
-			ctx.fillText(clickables[clickables.length-1].tooltip,30,350);
+			ctx.fillText(clickables[clickables.length-1].tooltip,20,590);
 	}
 };

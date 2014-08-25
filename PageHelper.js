@@ -4,12 +4,38 @@ var PageHelper = {
 		PageHelper.container = container;
 		PageHelper.addressfield = addressfield;
 		addressfield.onkeydown = PageHelper.search;
+		//for(var siteId in Sites){
+		//	var site = Sites[siteId];
+		//	site.element = document.createElement('div');
+		//	site.anchors = {};
+		//	for (var i = 0; i < site.content.length; i++) {
+		//		var sitecontent = site.content[i];
+		//		site.element.appendChild(sitecontent.asHTML(site));
+		//	};
+			//console.log(site);
+		//}
 		for(var pageId in Pages){
 			var page = Pages[pageId];
-			page.element = document.createElement('div');
-			for (var i = 0; i < page.content.length; i++) {
-				page.element.appendChild(page.content[i].asHTML());
-			};
+			//console.log(page);
+			//console.log(pageId)
+			if(page.content){
+				page.element = document.createElement('div');
+				for (var i = 0; i < page.content.length; i++) {
+					page.element.appendChild(page.content[i].asHTML());
+				};
+				//console.log(page);
+			}else if(page.asHTML){
+				var article = page.asHTML();
+				page.element = article;
+				page.style = article.ztyle;
+				if(article.reload)
+					page.reload = article.reload;
+
+				//console.log(page);
+				//console.log(page.element);
+			}else{
+				console.log("Warning: Page has no content or html: " + pageId)
+			}
 		}
 	},
 	search : function(event){
@@ -26,7 +52,14 @@ var PageHelper = {
 		historyStack.push(PageHelper.addressfield.value);
 		PageHelper.addressfield.value = pageid;
 		var page = Pages[pageid];
+		//console.log(page);
+		if(!page)
+			console.log("Missing page: "+ pageid);
 		document.getElementById("body").className = page.style;
+		if(page.reload){
+			console.log("reloaded " + pageid);
+			page.element = page.asHTML();
+		}
 		PageHelper.container.className = page.style;
 		var current = PageHelper.container.childNodes[0];
 		if(current){
@@ -34,7 +67,6 @@ var PageHelper = {
 			PageHelper.container.appendChild(page.element);
 		}else
 			PageHelper.container.appendChild(page.element);
-		
 	},
 	back : function(){
 		var pageid = historyStack.pop();
