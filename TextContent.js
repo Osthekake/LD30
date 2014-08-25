@@ -447,7 +447,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Feeling a little woozy fi8ohgaz'phawujdba")])
+				new Paragraph([new JustText("Feeling a little woozy fi8ohgaz'phawujdba")]),
 				new StyledDiv([
 					new Link("Mary Tallman", "www.facespace.com/maryt"),
 					new JustText(" you ok hun?")
