@@ -197,7 +197,8 @@ var Pages = {
 			new Header([new JustText("Game Over")]),
 			new Header([new JustText("You have been playing")], "h2"),
 			new Header([new JustText("Connected Worlds")]),
-			new JustText("By Osthekake and Kveldsdraum.<br/>Thank you for playing!!!!")
+			new JustText("By Osthekake and Kveldsdraum.<br/>Thank you for playing!!!!<br/><br/>"),
+			new Link("Epilogue", "www.paper.com/newmaster")
 		], 
 		reload : true
 	}),
@@ -772,5 +773,15 @@ var Pages = {
 			new Clue("her three daughters", "anne_has_only_daughters"),
 			new JustText(" are looking at the ships.")
 		]
-	})
+	}),
+	"www.paper.com/newmaster" : {
+		content : [
+			new Header([new JustText("The Paper")]),
+			new JustText("<hr/>"),
+			new Header([new JustText("A New Master At Beauly House")], "h2"),
+			new Paragraph([new JustText("In the dramatic resolution of his court case, Charles Beauly - formerly Charles Weatherby - was given ownership of the Beauly estate, following a verdict of Accidental Death at the inquest into the death of Lord Frederick Fitzcharles. Readers will recall some confusion as to the events of the evening of June 22nd this year, but the coroner's conclusion was that Lord Fitzcharles' fatal injuries were caused by his own actions in attempting to kill Charles Beauly, to secure his inheritance.")]),
+			new Paragraph([new JustText("In a prepared statement, Charles Beauly said he was satisfied with the verdict of the court, and will be happy to let his Conway cousins stay as long as they wish, as he intends to spend some time travelling and improving himself before taking up his duties as estate manager. The court awarded him the full inheritance he should have received from his father John Beauly, with normal interest, but allowed George Conway to keep the remainder of his fortune intact, as the judge was satisfied he was not cognisant of Charles' claim and thus acted in good faith by investing it.")])
+		],
+		style : "paper"
+	}
 }
