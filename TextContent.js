@@ -692,6 +692,31 @@ var Pages = {
 			new StyledDiv([
 				new Paragraph([new JustText("(22.06.1904 20.05) Did you forget to clean the drawing room today, "), new Link("Rosie?", "www.facespace.com/rosieb")])
 				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(22.06.1904 10.16) Gosh this standing still for several hours a day sure gives a body the chance to think about the state of the common man. And girls.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(21.06.1904 23.10) God that was a long day.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(20.06.1904 14.05) I found Herself's missing bottle and replaced it in her cabinet.")]),
+				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText (" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(19.06.1904 17.32) Really enjoyed watching Tall Mary at work today... Pity she's off-limits ;)")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(18.06.1904 23.58) Two guests in today, the house is very full! Makes me wish for my old bed again on a hot night like this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(18.06.1904 06.01) Ah, a fresh new dawn. Someone feed me intravenous coffee please.")])
+				], "facehistory"
 			)
 		]
 	}),
@@ -726,7 +751,29 @@ var Pages = {
 			new JustText("Social status: Widowed "),
 			new JustText("Works as: housekeeper at Beauly House"),
 			new StyledDiv([
-				new Paragraph([new JustText("Eat your breakfast "), new Link("Rosie", "www.facespace.com/rosieb"), new JustText(" love..")])
+				new Paragraph([new JustText("(22.06.1904 20.40) Wheres Rosie run off to now? Does she ever do any damn work?")]),
+				new StyledDiv([
+					new Link("Mary Tallman", "www.facespace.com/maryt"),
+					new JustText(" think i saw her going to the stables 10 mins ago. and look at her timeline if you want an answer to the second question. oh btw, dining room will take a while to clean becauseof that soup spill, will get round to the drawing room later on, dont worry.")
+					], "facehistory"
+				)
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(22.06.1904 06.22) Eat your breakfast "), new Link("Rosie", "www.facespace.com/rosieb"), new JustText(" love..")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(21.06.1904 21.01) I think I can manage this now. Should of got it ages ago. Laugh Out Loud")]),
+				new StyledDiv([
+					new Link("Rosie Blackwood", "www.facespace.com/rosieb"),
+					new JustText(" u just say lol mum not lauhg out loud lol")
+					], "facehistory"
+				)
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(21.06.1904 22.33) how di==do i use this thing")])
 				], "facehistory"
 			)
 		]
