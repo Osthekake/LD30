@@ -359,7 +359,6 @@ var Pages = {
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
 			)
-			)
 		]
 	}),
 	"www.facespace.com/maryy" : new PutInSite("www.facespace.com", {
