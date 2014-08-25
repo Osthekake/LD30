@@ -175,9 +175,9 @@ var Pages = {
 			new JustText("From: aliceb@beauly-house.com<br/>"),
 			new JustText("Leave us alone!<br/>"),
 			new JustText("------------------------------------<br/><br/>"),
-			new JustText("I think you police fellows ought to leave us alone. Freddie was no good for anyone. Would you believe "),
+			new JustText("I think you police fellows ought to leave us alone. Freddie was no good for no-one. Would you believe "),
 			new Clue("he was havin his way with Rosie?", "rosie_mother_knows_freddys_secret"),
-			new JustText(" Damn upper class! "), new Clue("I told Georgia too", "georgia_knows_freddys_secret"), new JustText(", I did. I think yous police shoulda been here to stop that.<br/><br/>"),
+			new JustText(" Damn entitled nobility! "), new Clue("I told Miss Georgia too", "georgia_knows_freddys_secret"), new JustText(", I did. I think you police should of been here to stop that.<br/><br/>"),
 			new Link("Alice", "www.facespace.com/aliceb")
 		], 
 		reload : true
@@ -192,6 +192,7 @@ var Pages = {
 			new JustText("I wish to congratulate you on solving the murder of Frederick Fitzcharles."),
 			new JustText(" As you have deduced, the murderer was Charles Weatherby, heir of House Beauly."),
 			new JustText(" As this was in self defense, his punishment will be mild.<br/><br/>"),
+			new JustText("The matter of the inheritance of the Beauly Estate will be investigated when the trial is complete.<br/><br/>"),
 			new JustText("I thank you for your services.<br/><br/>E<br/><br/>"),
 			new Header([new JustText("Game Over")]),
 			new Header([new JustText("You have been playing")], "h2"),
@@ -219,20 +220,21 @@ var Pages = {
 			new Header([new JustText("Currently hiring:")], "h2"),
 			new Paragraph([new Header([new JustText("Housemaid")], "h3"), new JustText("Clean, moral girl with loyal disposition and good work ethic.")]),
 			new Paragraph([new Header([new JustText("Gardener")], "h3"), new JustText("Self sufficient and skilled gardener with clean past.")]),
-			new Paragraph([new JustText("Contact via mail for more information.")]),
+			new Paragraph([new JustText("Contact the housekeeper Mrs Alice Blackwood for more information.")]),
 		]
 	}),
 	"www.beauly-house.com/enterprise" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
-			new Header([new JustText("The Conway Enterprise")], "h2"),
-			new Paragraph([new Header([new JustText("Conway Shipping")], "h3"), new JustText("We ship goods all the way to and from the far east.")]),
-			new Paragraph([new JustText("Looking to invest? Contact george@beauly-house.com")]),
+			new Header([new JustText("Conway Enterprises")], "h2"),
+			new Paragraph([new Header([new JustText("Conway Shipping")], "h3"), new JustText("We ship goods directly to and from the Far East. All shipment sizes considered.")]),
+			new Paragraph([new Header([new JustText("Curios and Antiques of the East")], "h3"), new JustText("For all your chinoiserie needs.")]),
+			new Paragraph([new JustText("Looking to invest? Contact george@beauly-house.com.")]),
 		]
 	}),
 	"www.beauly-house.com/location" : new PutInSite("www.beauly-house.com", {
 		"mansion" : [
 			new Header([new JustText("The Beauly Mansion")], "h2"),
-			new Paragraph([new JustText("The original manor house has been much improved on over the years, but original fittings can still be seen in the kitchens and at the rear of the house.")]),
+			new Paragraph([new JustText("The original Elizabethan manor house has been much improved on over the years, but original fittings can still be seen in the kitchens and at the rear of the house.")]),
 			new Paragraph([new JustText("Much of the reconstruction of the house was completed by J. Michael Beauly, the great-uncle of Anne Conway (née Beauly), who was much inspired by the architectural styes of New England in his journeys to the United States. Beauy House is the only surviving example of his unique style; he built four other houses in the county, but all of them have since been lost to fire or misadventure. J. Michael Beauly was particularly pleased with Beauly House, and described it as his last and greatest work.")]),
 			new Paragraph([new JustText("The grounds are extensive, and boast a unique folly constructed by John Henry Beauly and his wife Marie Cameron Beauly in 1746. Built before the fashion for follies really took off, family lore has it that the Beaulys started the craze for such features, whilst local lore has it that Marie Cameron Beauly, a noted Jacobite, had the gold she was hoarding for Bonnie Prince Charlie"), new Clue(" buried beneath it", "gold_buried_under_folly"), new JustText(", vowing that no-one should have it if he did not.")]),
 			new Paragraph([new JustText("Contact the housekeeper"), new Link(" Mrs Blackwood", "www.facespace.com/aliceb"), new JustText(" for a tour of the house and grounds.")]),
@@ -359,7 +361,7 @@ var Pages = {
 			new JustText("Age: 22 "),
 			new JustText("Social status: Single"),
 			new StyledDiv([
-				new Paragraph([new JustText("Big man is out. Cards tonight?")]),
+				new Paragraph([new JustText("(22.06.1904 16.00) Big man is out. Cards tonight?")]),
 				new StyledDiv([
 					new Link("Anna Conway", "www.facespace.com/annac"),
 					new JustText(" Totally!")
@@ -368,6 +370,21 @@ var Pages = {
 				new StyledDiv([
 					new Link("Harold Conway", "www.facespace.com/haroldc"),
 					new JustText(" Just you and me. Freddy doesn't want to.")
+					], "facehistory"
+				)
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(20.06.2014 15.30) Spending lots of time with "), new Link("Uncle George", "www.facespace.com/georgew"), new JustText(" learning the tricks of the trade! Really looking forwrd to startimg my apprenticeship at his company next month!")]),
+				new Paragraph([new Link("George Conway", "www.facespace.com/georgec"), new JustText (" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(17.06.1904 15.34) Staying with "), new Link("Uncle George", "www.facespace.com/georgew"), new JustText(" and family at Beauly House this week, good to get out of Father's hair for a while.")]),
+				new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText (" likes this.")]),
+				new StyledDiv([
+					new Link("Georgia Conway", "www.facespace.com/georgiac"),
+					new JustText(" Looking forward to seeing you again coz!")
 					], "facehistory"
 				)
 				], "facehistory"
@@ -380,6 +397,15 @@ var Pages = {
 			new JustText("Age: 24 "),
 			new JustText("Social status: Engaged to "), new Link("Georgia Conway", "www.facespace.com/georgiac"),
 			new StyledDiv([
+				new Paragraph([new JustText("(22.06.1904 17.23) Why are there covered up pictures of "), new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText(" all over the house??")]),
+				new StyledDiv([
+					new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" That's not Charles, that's "), new Clue("Mummy's dead brother.", "charles_is_johns_son")]),
+					new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText(" Huh, weird.")]),
+					], "facehistory"
+				),
+				], "facehistory"
+			),
+			new StyledDiv([
 				new Paragraph([new JustText("Why wasn't I invited to go fishing?")]),
 				new StyledDiv([
 					new Link("Harold Conway", "www.facespace.com/haroldc"),
@@ -387,15 +413,7 @@ var Pages = {
 					], "facehistory"
 				)
 				], "facehistory"
-			), 
-			new StyledDiv([
-				new Paragraph([new JustText("Why are there covered up pictures of "), new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText(" all over the house??")]),
-				new StyledDiv([
-					new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText(" That's not me, that's "), new Clue("Anne's dead brother.", "charles_is_johns_son")]),
-					], "facehistory"
-				),
-				], "facehistory"
-			),
+			)
 		]
 	}),
 	"www.facespace.com/annac" : new PutInSite("www.facespace.com", {
@@ -714,7 +732,7 @@ var Pages = {
 		],
 		style : "journal"
 	},
-	"www.paper.com/bankrupcy" : new PutInSite("www.paper.com", {
+	"www.paper.com/bankruptcy" : new PutInSite("www.paper.com", {
 		"article" : [
 			new Header([new JustText("Conway Bankrupt")], "h2"),
 			new Header([new JustText("Date: 13.06.1904")], "h4"),
