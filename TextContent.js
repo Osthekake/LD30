@@ -21,7 +21,7 @@ Sites = {
 			new Header([new JustText("The Paper")]),
 			new JustText("<hr/>"),
 			new StyledDiv([
-				new Header([new JustText("A small notice &dagger;")], "h4"),
+				new Header([new JustText("June 23rd 1904: A small notice &dagger;")], "h4"),
 				new Paragraph([
 					new JustText("We regret to announce "), 
 					new Clue("the unexpected death of Lord Frederick Fitzcharles", "freddy_is_dead"), 
