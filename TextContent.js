@@ -70,7 +70,7 @@ var Pages = {
 				new JustText("* Click on clues to build a case.<br/>"),
 				new JustText("* Click on links to navigate around, or:<br/>"),
 				new JustText("* Enter urls in the bar above.<br/>"),
-				new JustText("* Remember to read your mails.<br/>"),
+				new JustText("* The green envelope means you have mails. Click it to read your mails!<br/>"),
 				new StyledDiv([new Link("Start Game", "www.letters.com/1")], "bordered")
 			], "centered")
 		],
@@ -487,8 +487,12 @@ var Pages = {
 					new JustText(" you ok hun?")
 					], "facehistory"
 				)
+<<<<<<< HEAD
 				], "facehistory"
 			),
+=======
+			], "facehistory"),
+>>>>>>> origin/master
 			new StyledDiv([
 				new Paragraph([new JustText("Didn't have enough time for breakfast and I'm really suffering for it.")])
 				], "facehistory"

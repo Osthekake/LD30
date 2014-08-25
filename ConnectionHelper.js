@@ -127,7 +127,8 @@ var ConnectionHelper = {
 			ConnectionHelper.drawALine(realx1, realy1, realx2, realy2);
 		}
 		//text at the bottom
+		ctx.font="17px Arial";
 		if(clickables[clickables.length-1])
-			ctx.fillText(clickables[clickables.length-1].tooltip,30,550);
+			ctx.fillText(clickables[clickables.length-1].tooltip,20,590);
 	}
 };
