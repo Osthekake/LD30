@@ -70,7 +70,7 @@ var Pages = {
 				new JustText("* Click on clues to build a case.<br/>"),
 				new JustText("* Click on links to navigate around, or:<br/>"),
 				new JustText("* Enter urls in the bar above.<br/>"),
-				new JustText("* The green envelope means you have mails. Click it to read your mails!<br/>"),
+				new JustText("* The green envelope means you have mail. Click it to read your mail!<br/>"),
 				new StyledDiv([new Link("Start Game", "www.letters.com/call")], "bordered")
 			], "centered")
 		],
@@ -115,7 +115,7 @@ var Pages = {
 			new JustText("Dear Sir or Madam<br/><br/>"),
 			new JustText("Mysterious circumstances have occured at "),
 			new Link("Beauly House.", "www.scroogle.com/Beauly%20House"),
-			new JustText(" Your special investigative skills, and unique intelligence resources are required. Commence investigation immediately.<br/><br/>"),
+			new JustText(" Your special investigative skills, and unique intelligence resources are required. Commence investigation immediately. Details of this case have already reached the local paper so a swift resolution would be highly beneficial to the Crown.<br/><br/>"),
 			new JustText("E<br/>")
 		], 
 		reload : true			
@@ -136,7 +136,7 @@ var Pages = {
 			new Clue("gun", "freddy_had_a_gun"),
 			new JustText(" belonging to "),
 			new Link("George Conway", "www.facespace.com/georgec"),
-			new JustText(" was found near the body. <br/><br/>G")	
+			new JustText(" was found near the body. Estimated time of death is between 9.15pm and 9.40pm based on witness testimony.<br/><br/>G")	
 		], 
 		reload : true
 	}),
