@@ -81,7 +81,7 @@ var Connections = {
 	"freddy_motive_to_kill_charles" : {
 		coords : [6, 4, 4, 5],
 		tooltip : "Frederick had a motive to kill charles.",
-		children : ["charles_is_heir_to_beauly", "georgia_engaged_to_freddy"]
+		children : ["charles_is_heir_to_beauly", "georgia_engaged_to_freddy", "freddy_financial_troubles"]
 	},
 	"georgia_engaged_to_freddy" : {
 		coords : [3, 3, 4, 4],
@@ -179,5 +179,13 @@ var Connections = {
 	"drawing_room_not_cleaned" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "The Drawing Room has not been cleaned properly." // relates to rosie_lazy
+	},
+	"freddy_financial_troubles" : {
+		coords : [0, 0, 0, 0],
+		tooltip : "Freddy's family was having financial difficulty." // relates to freddy_motive_to_kill_charles
+	},
+	"gold_buried_under_folly" : {
+		coords : [0, 0, 0, 0],
+		tooltip : "Jacobite gold is rumoured to be buried under the folly." // red herring clue!
 	}
 }

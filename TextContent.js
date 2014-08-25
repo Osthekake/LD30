@@ -352,11 +352,13 @@ var Pages = {
 		"face" : [
 			new Header([new JustText("Mary Tallman")], "h2"),
 			new JustText("Age: 19 "),
-			new JustText("Social status: It's complicated"),
+			new JustText("Social status: It's complicated "),
 			new JustText("Works as: housemaid at Beauly House"),
 			new StyledDiv([
-				new Paragraph([new JustText("no recent events.")])
+				new Paragraph([new JustText("Nearly finished my painting! The folly looks so beautiful at sunset!")]),
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
+			)
 			)
 		]
 	}),
@@ -364,7 +366,7 @@ var Pages = {
 		"face" : [
 			new Header([new JustText("Mary Younger")], "h2"),
 			new JustText("Age: 45 "),
-			new JustText("Social status: Single"),
+			new JustText("Social status: Single "),
 			new JustText("Works as: housemaid at Beauly House"),
 			new StyledDiv([
 				new Paragraph([new JustText("no recent events.")])
@@ -376,7 +378,7 @@ var Pages = {
 		"face" : [
 			new Header([new JustText("Rosie Blackwood")], "h2"),
 			new JustText("Age: 16 "),
-			new JustText("Social status: single"),
+			new JustText("Social status: single "),
 			new JustText("Works as: housemaid at Beauly House"),
 			new StyledDiv([
 				new Paragraph([new JustText("oops think sum1 saw us lol")])
@@ -444,7 +446,7 @@ var Pages = {
 				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText(" likes this.")]),
 				new Paragraph([new Link("Mary Younger", "www.facespace.com/maryy"), new JustText(" likes this.")]),
 				new Paragraph([new Link("Mary Helen Weatherby", "www.facespace.com/maryw"), new JustText(" likes this.")]),
-				new Paragraph([new Link("Alice Blackwood", "www.facespace.com/alicew"), new JustText(" likes this.")])
+				new Paragraph([new Link("Alice Blackwood", "www.facespace.com/aliceb"), new JustText(" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
@@ -453,7 +455,7 @@ var Pages = {
 			),
 			new StyledDiv([
 				new Paragraph([new JustText("eatin early thx mum")]),
-				new Paragraph([new Link("Alice Blackwood", "www.facespace.com/alicew"), new JustText(" likes this.")])
+				new Paragraph([new Link("Alice Blackwood", "www.facespace.com/aliceb"), new JustText(" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
@@ -466,7 +468,7 @@ var Pages = {
 		"face" : [
 			new Header([new JustText("Charles Weatherby")], "h2"),
 			new JustText("Age: 23 "),
-			new JustText("Social status: Single"),
+			new JustText("Social status: Single "),
 			new JustText("Works as: footman at Beauly House"),
 			new StyledDiv([
 				new Paragraph([new JustText("no recent events.")])
@@ -478,7 +480,7 @@ var Pages = {
 		"face" : [
 			new Header([new JustText("Edward Weatherby")], "h2"),
 			new JustText("Age: 50 "),
-			new JustText("Social status: Married to"), new Link("Mary Helen Weatherby", "www.facespace.com/maryw"),
+			new JustText("Social status: Married to"), new Link("Mary Helen Weatherby ", "www.facespace.com/maryw"),
 			new JustText("Works as: butler at Beauly House"),
 			new StyledDiv([
 				new Paragraph([new JustText("no recent events.")])
@@ -490,7 +492,7 @@ var Pages = {
 		"face" : [
 			new Header([new JustText("Mary Helen Weatherby")], "h2"),
 			new JustText("Age: 46 "),
-			new JustText("Social status: Married to"), new Link("Edward Weatherby", "www.facespace.com/edwardw"),
+			new JustText("Social status: Married to"), new Link("Edward Weatherby ", "www.facespace.com/edwardw"),
 			new JustText("Works as: cook at Beauly House"),
 			new StyledDiv([
 				new Paragraph([new JustText("no recent events.")])
@@ -502,7 +504,7 @@ var Pages = {
 		"face" : [
 			new Header([new JustText("Alice Blackwood")], "h2"),
 			new JustText("Age: 55 "),
-			new JustText("Social status: Widowed"),
+			new JustText("Social status: Widowed "),
 			new JustText("Works as: housekeeper at Beauly House"),
 			new StyledDiv([
 				new Paragraph([new JustText("no recent events.")])
@@ -525,7 +527,10 @@ var Pages = {
 			new Clue("brother George ", "harolds_father_is_bankrupt"),
 			new JustText("is well-known on these pages for his "),
 			new Clue("business concerns in the Orient, ", "the_Conway_fortune_comes_from_China"),
-			new JustText("was forced to put his company into administration."),
+			new JustText("was forced to put his company into administration.<br/><br/>"),
+			new JustText("This is not the first time this week that George Conway's friends and relations have been hit with a financial scandal. His former business partner and close personal friend Charles Fitzcharles, Lord Linmouth, was forced to liquidate several assets in order to meet various obligations. Lord Linmouth's son,"),
+			new Clue(" Lord Frederick Fitzcharles,", "freddy_financial_troubles"),
+			new JustText(" refused to comment when approached by this paper.<br/><br/>"),
 			new Link("?")
 		]
 	}),
