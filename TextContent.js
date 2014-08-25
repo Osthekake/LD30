@@ -383,6 +383,80 @@ var Pages = {
 			new StyledDiv([
 				new Paragraph([new JustText("goin to the folly with my man yay")]) // needs clue link
 				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("so in luv!!!")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("finishd cleanin really fast lol")]) // needs clue
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("present from mystery man! <3")]) // needs clue
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("was i suposed 2 clean the drawin rm or the dinin rm cant rember lol")]),
+				new StyledDiv([
+					new Link("Mary Tallman", "www.facespace.com/maryt"),
+					new JustText(" Both. hurry it up.")
+					], "facehistory"
+				)
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("i thot only old ppl got hangovers lol")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("feel a bit sick lol")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("lotsa wine left over from dinner yum")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("oops not suposed 2 say lol")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("guess whose got a new man!!!")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("omg my hands hurt so much :( ")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("so tired of cleanin evrythin")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("gotta do so much 2day young marys takin her 1/2 day early wtf")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("kitchen cat has kittens!!! omg so kewt!!!!")]),
+				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText(" likes this.")]),
+				new Paragraph([new Link("Mary Younger", "www.facespace.com/maryy"), new JustText(" likes this.")]),
+				new Paragraph([new Link("Mary Helen Weatherby", "www.facespace.com/maryw"), new JustText(" likes this.")]),
+				new Paragraph([new Link("Alice Blackwood", "www.facespace.com/alicew"), new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("lookin at the horsies!")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("eatin early thx mum")]),
+				new Paragraph([new Link("Alice Blackwood", "www.facespace.com/alicew"), new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("takin a nap lol")])
+				], "facehistory"
 			)
 		]
 	}),
