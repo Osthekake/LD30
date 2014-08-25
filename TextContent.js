@@ -343,7 +343,42 @@ var Pages = {
 			new JustText("Age: 17 "),
 			new JustText("Social status: Single"),
 			new StyledDiv([
-				new Paragraph([new JustText("no recent events.")])
+				new Paragraph([new JustText("another argument with parents. old people are so stupid.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("found out a really big secret today and don't know what to do")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("i'm bored of all of these black covered pictures, why don't we take them down and put up some of Georgia's?")]),
+				new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("god noone ever listens to me")]),
+				new StyledDiv([
+					new Link("Harold Conway", "www.facespace.com/haroldc"),
+					new JustText(" *no-one :P")
+					], "facehistory"
+				)
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("literally so bored i could die right now.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("okay fine i hate all the people except Charles :) ")]),
+				new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText(" likes this.")])
+				], "facehistory"
+			),new StyledDiv([
+				new Paragraph([new JustText("the house feels really full. because it is. i hate people.")]),
+				new StyledDiv([
+					new Link("Charles Weatherby", "www.facespace.com/charlesw"),
+					new JustText(" Even me? Q.Q")
+					], "facehistory"
+				)
 				], "facehistory"
 			)
 		]
@@ -355,8 +390,36 @@ var Pages = {
 			new JustText("Social status: It's complicated "),
 			new JustText("Works as: housemaid at Beauly House"),
 			new StyledDiv([
-				new Paragraph([new JustText("Nearly finished my painting! The folly looks so beautiful at sunset!")]),
-				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
+				new Paragraph([new JustText("really liked Miss Anna's new dress tonight, very chic")]),
+				new Paragraph([new Link("Anna Conway", "www.facespace.com/annac"), new JustText (" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("did anyone clean the morning room?")]),
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("am running around like a blue arsed fly >.<")]),
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("had a rough day at work but everything settled thanks to charles")]),
+				new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText (" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("wonder how certain people have so much time to write on facespace when they should be working?")]),
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("rocking my new stockings!")]),
+				new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charlesw"), new JustText (" likes this.")]),
+				new Paragraph([new Link("Anna Conway", "www.facespace.com/annac"), new JustText (" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("looking forward to having tonight off")]),
+				new Paragraph([new Link("Anna Conway", "www.facespace.com/annac"), new JustText (" likes this.")])
 				], "facehistory"
 			)
 		]
@@ -368,7 +431,35 @@ var Pages = {
 			new JustText("Social status: Single "),
 			new JustText("Works as: housemaid at Beauly House"),
 			new StyledDiv([
-				new Paragraph([new JustText("no recent events.")])
+				new Paragraph([new JustText("I love my coworkers so much, they're such stars.")]),
+				new Paragraph([new Link("Mary Tallman", "www.facespace.com/maryt"), new JustText (" likes this.")]),
+				new Paragraph([new Link("Rosie Blackwood", "www.facespace.com/rosieb"), new JustText (" likes this.")]),
+				new Paragraph([new Link("Charles Weatherby", "www.facespace.com/charles w"), new JustText (" likes this.")]),
+				new Paragraph([new Link("Mary Weatherby", "www.facespace.com/maryw"), new JustText (" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("I'm feeling much better today.")]),
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Taking my half day today.")]),
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Feeling a little woozy fi8ohgaz'phawujdba")]),
+				new StyledDiv([
+					new Link("Mary Tallman", "www.facespace.com/maryt"),
+					new JustText(" you ok hun?")
+					], "facehistory"
+				),
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Didn't have enough time for breakfast and I'm really suffering for it :( ")]),
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("Feeling poorly this evening again.")]),
 				], "facehistory"
 			)
 		]
