@@ -4,9 +4,14 @@ var ConnectionHelper = {
 	init : function(ctx){
 		for(var connectionId in Connections){
 			var connection = Connections[connectionId];
+			
+			//todo: remove this line
+			clickables.push(connection);
+
 			if(connection.children){
 				for (var i = 0; i < connection.children.length; i++) {
 					var child = connection.children[i];
+					//console.log(child);
 					Connections[child].parent = connection;
 				}
 			}
@@ -30,8 +35,8 @@ var ConnectionHelper = {
 	},
 	cycleHighlight : function() {
 		var top = clickables.shift();
-		console.log(clickables);
-		console.log(top);
+		//console.log(clickables);
+		//console.log(top);
 		clickables.push(top);
 		ConnectionHelper.render();	
 	},

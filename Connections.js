@@ -1,6 +1,12 @@
 var Connections = {
+
+	/*
+	 *	Please note the *s	
+	 *	connections marked with a * still need a clue related to them
+	*/
+
 	"freddy_is_dead" : {
-		coords : [8, 6, 8, 7],
+		coords : [4, 0, 4, 1],
 		tooltip : "Frederick Fitzcharles is dead.",
 		onsolved : function(){
 			MailBox.addMail("Coroner", "www.letters.com/2");
@@ -8,24 +14,50 @@ var Connections = {
 	},
 
 	"freddy_was_stabbed" : {
-		coords : [8, 7, 8, 8],
+		coords : [4, 1, 4, 2],
 		tooltip : "Frederick Fitzcharles was killed by stabbing.",
 	},
 	"freddy_struggled" : {
-		coords : [7, 6, 8, 6],
+		coords : [4, 7, 4, 8],
 		tooltip : "Frederick Fitzcharles died in a struggle.",
 	},
+	"charles_no_alibi" : {
+		coords : [2, 6, 4, 8],
+		tooltip : "Charles has no alibi for the time when Freddy was murdered.",
+		children : []//need subconnections for this I guess?
+	},
+	"charles_means" : {
+		coords : [7, 7, 4, 8],
+		tooltip : "Charles had the means to kill Freddy.",
+		children : ["anna_lost_knife", "georgia_found_knife"]
+	},
+	"freddy_tried_to_kill_charles" : {
+		coords : [4, 5, 4, 7],
+		tooltip : "Frederick attempted to murder Charles.",
+		children : ["freddy_motive_to_kill_charles", "charles_was_with_freddy", "freddy_had_a_gun"]
+	},
+
+	"charles_was_with_freddy" : { //*
+		coords : [5, 6, 4, 7],
+		tooltip : "Charles was meeting Freddy before he died."
+	},
+	"charles_killed_freddy" : {
+		coords : [4, 8, 4, 10],
+		tooltip : "Charles killed Freddy in self-defense.",
+		children : ["charles_means", "charles_no_alibi", "freddy_tried_to_kill_charles"]
+	},
+
 	//connections for charles is heir:
 	"charles_is_heir_to_beauly": {
 		coords : [6, 1, 6, 4],
 		tooltip : "Chales Weatherby is the heir to Beauly House.",
 		children : ["charles_is_johns_son", "anne_had_an_elder_brother", "anne_has_only_daughters", "george_inherited_through_anne"]
 	},
-	"charles_is_johns_son" : {
+	"charles_is_johns_son" : { //*
 		coords : [7, 1, 7, 2],
 		tooltip : "Charles Weatherby is the natural son of John Beauly." //relates to jane_loves_charles
 	},
-	"anne_had_an_elder_brother" : {
+	"anne_had_an_elder_brother" : { //*
 		coords : [6, 1, 7, 2],
 		tooltip: "John Beauly was Anne Conway's elder brother."
 	},
@@ -33,78 +65,83 @@ var Connections = {
 		coords : [7, 2, 7, 3],
 		tooltip : "All of Annes children are girls."
 	},
-	"george_inherited_through_anne" : {
+	"george_inherited_through_anne" : { 
 		coords : [7, 3, 6, 4],
 		tooltip : "George Conway married into Beauly House through Anne."
 	},
 
 	"anna_lost_knife" : {
-		coords : [9, 7, 8, 8],
-		tooltip : "Anna is missing a sharp object.",
+		coords : [5, 1, 4, 2],
+		tooltip : "Anna is missing a sharp silver letter opener.",
 		onsolved : function(){
 			MailBox.addMail("Weapon", "www.letters.com/3");
 		}
 	},
 
 	"freddy_motive_to_kill_charles" : {
-		coords : [6, 1, 4, 4],
+		coords : [6, 4, 4, 5],
 		tooltip : "Frederick had a motive to kill charles.",
-		children : ["charles_is_heir_to_beauly", "georgia_engaged_to_freddy", "freddy_had_a_gun"]
+		children : ["charles_is_heir_to_beauly", "georgia_engaged_to_freddy"]
 	},
 	"georgia_engaged_to_freddy" : {
 		coords : [3, 3, 4, 4],
 		tooltip : "Georgia Conway is engaged to Freddy Fitzcharles."
 	},
 	"freddy_had_a_gun" : {
-		coords : [6, 3, 4, 4],
+		coords : [4, 5, 5, 6],
 		tooltip : "Freddy posessed a gun when he died."
 	},
 	"georgia_motive" : {
-		coords : [5, 2, 4, 4],
+		coords : [4, 2, 5, 5],
 		tooltip : "Georgia has a motive to kill Frederick.",
 		children : ["freddy_sleeping_with_rosie", "georgia_knows_freddys_secret"]
 	},
+	"georgia_alibi" : { //*
+		coords : [5, 5, 7, 6],
+		tooltip : "Georgia has an alibi somehow.",
+		children : [] //need components
+	},
+	"georgia_found_knife" : {
+		coords : [7, 6, 7, 7],
+		tooltip : "Georgia found the letter opener, and gave it to Charles."
+	},
 	"rosie_mother_motive" : {
-		coords : [2, 2, 4, 4],
-		tooltip : "Rosies mother has a motive to kill Frederick.",
+		coords : [3, 3, 3, 6],
+		tooltip : "Alice Blackwood has a motive to kill Frederick.",
 		children : ["freddy_sleeping_with_rosie", "rosie_mother_knows_freddys_secret"]
 	},
+	"rosie_mother_not_fighter" : {//*
+		coords : [3, 6, 4, 7],
+		tooltip : "Alice Blackwood is not capable of fighting a grown man."
+	},
+	"rosie_mother_not_killer" : {
+		coords : [3, 3, 4, 7],
+		tooltip : "Alice Blackwood did not kill Freddy.",
+		children : ["rosie_mother_motive", "rosie_mother_not_fighter"]
+	},
 
-	"freddy_sleeping_with_rosie" : {
-		coords : [4, 3, 4, 4],
+	"freddy_sleeping_with_rosie" : { //*
+		coords : [4, 2, 3, 3],
 		tooltip : "Freddy has been having an affair with Rosie." // relates to georgia_engaged_to_freddy
 	},
-	"georgia_knows_freddys_secret" : {
-		coords : [5, 2, 4, 3],
+	"georgia_knows_freddys_secret" : { //*
+		coords : [3, 3, 5, 5],
 		tooltip : "Georgia knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
 	},
-	"rosie_mother_knows_freddys_secret" : {
-		coords : [2, 2, 4, 3],
-		tooltip : "Georgia knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
-	},
-	
-
-
-	"jane_and_anne_have_same_last_name" : {
-		coords : [2, 0, 2, 1],
-		tooltip : "Jane and Anne are both named Conway."
-	},
-	
-	"john_is_janes_uncle" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "John Beauly is Jane Conways uncle.",
-		children : ["anne_had_an_elder_brother", "jane_and_anne_have_same_last_name"]
+	"rosie_mother_knows_freddys_secret" : { //*
+		coords : [2, 2, 3, 3],
+		tooltip : "Alice Blackwood knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
 	},
 	"jane_loves_charles" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "Jane Conway is in love with Charles Weatherby." // relates to charles_is_johns_son, jane_killed_her_father
 	},
 	"anna_loves_tall_mary" : {
-		coords : [0, 0, 0, 0],
+		coords : [1, 3, 1, 4],
 		tooltip : "Anna and Tall Mary are in a relationship." // relates to tall_mary_loves_anna, freddy_and_anna_mad
 	},
 	"tall_mary_secretly_engaged" : {
-		coords : [0, 0, 0, 0],
+		coords : [2, 3, 1, 4],
 		tooltip : "Tall Mary has been secretly engaged for several years." // relates to anna_loves_tall_mary, tall_mary_loves_anna
 	},
 	"tall_mary_loves_anna" : {
