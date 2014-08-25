@@ -395,11 +395,11 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("did anyone clean the morning room?")]),
+				new Paragraph([new JustText("did anyone clean the morning room?")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("am running around like a blue arsed fly >.<")]),
+				new Paragraph([new JustText("am running around like a blue arsed fly >.<")])
 				], "facehistory"
 			),
 			new StyledDiv([
@@ -408,7 +408,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("wonder how certain people have so much time to write on facespace when they should be working?")]),
+				new Paragraph([new JustText("wonder how certain people have so much time to write on facespace when they should be working?")])
 				], "facehistory"
 			),
 			new StyledDiv([
@@ -439,15 +439,15 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("I'm feeling much better today.")]),
+				new Paragraph([new JustText("I'm feeling much better today.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Taking my half day today.")]),
+				new Paragraph([new JustText("Taking my half day today.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Feeling a little woozy fi8ohgaz'phawujdba")]),
+				new Paragraph([new JustText("Feeling a little woozy fi8ohgaz'phawujdba")])
 				new StyledDiv([
 					new Link("Mary Tallman", "www.facespace.com/maryt"),
 					new JustText(" you ok hun?")
@@ -455,11 +455,11 @@ var Pages = {
 				),
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Didn't have enough time for breakfast and I'm really suffering for it :( ")]),
+				new Paragraph([new JustText("Didn't have enough time for breakfast and I'm really suffering for it.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Feeling poorly this evening again.")]),
+				new Paragraph([new JustText("Feeling poorly this evening again.")])
 				], "facehistory"
 			)
 		]
@@ -646,7 +646,7 @@ var Pages = {
 		"article" : [
 			new Header([new JustText("Ships Washed Ashore After Fierce Storm")], "h2"),
 			new Header([new JustText("Date: 11.05.1904")], "h4"),
-			new JustText("Following an unseasonable gale, several ships and small boat were found washed ashore down the coast, having been ripped away from their moorings in the night.<br/>"),
+			new JustText("Following an unseasonable gale, several ships and small boats were found washed ashore down the coast, having been ripped away from their moorings in the night.<br/>"),
 			new JustText("Conway Enterprises has ensured that all of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth, or George Conway at Beauly House.<br/>"),
 			new MImage("img/women.jpg", 150, 250),
 			new JustText("<br/>(in the picture:) Anne Conway and "),
