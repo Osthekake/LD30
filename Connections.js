@@ -98,8 +98,8 @@ var Connections = {
 	},
 	"georgia_alibi" : { //*
 		coords : [5, 5, 7, 6],
-		tooltip : "Georgia has an alibi somehow.",
-		children : [] //need components
+		tooltip : "Georgia was shouting at Rosie at the time of the murder.",
+		children : ["georgia_rosie_argument", "anne_overhears_argument"]
 	},
 	"georgia_found_knife" : {
 		coords : [7, 6, 7, 7],
@@ -132,10 +132,6 @@ var Connections = {
 		coords : [2, 2, 3, 3],
 		tooltip : "Alice Blackwood knows that Freddy is sleeping with Rosie." // relates to freddy_and_anna_mad, freddy_sleeping_with_rosie
 	},
-	"jane_loves_charles" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Jane Conway is in love with Charles Weatherby." // relates to charles_is_johns_son, jane_killed_her_father
-	},
 	"anna_loves_tall_mary" : {
 		coords : [1, 3, 1, 4],
 		tooltip : "Anna and Tall Mary are in a relationship." // relates to tall_mary_loves_anna, freddy_and_anna_mad
@@ -164,21 +160,13 @@ var Connections = {
 		coords : [0, 0, 0, 0],
 		tooltip : "Anne is addicted to laudanum."
 	},
-	"anne_knows_charles_is_nephew" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Anne knows Charles is her brother's son." // related to charles_is_johns_son
-	},
-	"rosie_daughter_alice_and_ned" : {
-		coords : [0, 0, 0, 0],
-		tooltip : "Rosie is the natural daughter of Ned Weatherby and Alice Blackwood."
-	},
 	"rosie_lazy" : {
 		coords : [0, 0, 0, 0],
-		tooltip : "Rosie's laziness goes unpunished by her parents." // related to rosie_daughter_alice_and_ned
+		tooltip : "Rosie's laziness goes unpunished by her mother."
 	},
 	"drawing_room_not_cleaned" : {
 		coords : [0, 0, 0, 0],
-		tooltip : "The Drawing Room has not been cleaned properly." // relates to rosie_lazy
+		tooltip : "The Drawing Room has not been cleaned properly." // relates to rosie_lazy, georgia_finds_knife
 	},
 	"freddy_financial_troubles" : {
 		coords : [0, 0, 0, 0],
@@ -195,5 +183,13 @@ var Connections = {
 	"charles_conceived_out_of_wedlock" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "Charles was conceived before his parents got married." // relates to charles_is_johns_son
+	},
+	"georgia_rosie_argument" : {
+		coords : [0, 0, 0, 0],
+		tooltip : "Georgia and Rosie were having a screaming argument at the time of the murder." // relates to georgia_alibi
+	},
+	"anne_overhears_argument" : {
+		coords : [0, 0, 0, 0],
+		tooltip : "Anne heard the argument and sent Edward Weatherby to stop it." // relates to georgia_alibi
 	}
 }

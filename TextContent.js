@@ -198,7 +198,25 @@ var Pages = {
 			new JustText("Age: 44 "),
 			new JustText("Social status: Married to "), new Link("Anne Beauly", "www.facespace.com/anneb"),
 			new StyledDiv([
-				new Paragraph([new JustText("George Conway went fishing. (22.6.1904)<br/>"), 
+				new Paragraph([new JustText("George Conway went fishing. (22.6.1904 15.00)<br/>"), 
+					new Link("Harold Conway", "www.facespace.com/haroldc"), 
+					new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("George Conway went clay-pigeon shooting. (21.6.1904 15.02)<br/>"), 
+					new Link("Harold Conway", "www.facespace.com/haroldc"), 
+					new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("George Conway went riding. (20.6.1904 14.58)<br/>"), 
+					new Link("Harold Conway", "www.facespace.com/haroldc"), 
+					new JustText(" likes this.")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("George Conway went to the range. (19.6.1904 15.01)<br/>"), 
 					new Link("Harold Conway", "www.facespace.com/haroldc"), 
 					new JustText(" likes this.")])
 				], "facehistory"
@@ -211,15 +229,26 @@ var Pages = {
 			new JustText("Age: 46 "),
 			new JustText("Social status: Married to "), new Link("George Conway", "www.facespace.com/georgec"),
 			new StyledDiv([
-				new JustText("(12.5.1906) Anne wrote on her brothers wall on his birthday:"),
-				new Paragraph([new JustText("Miss you brother...")])
+				new Paragraph([new Link("Edward Weatherby", "www.facespace.com/edwardw"), new JustText(" Weatherby, please stop my eldest daughter from shouting at the maid."), new Clue(" They have been at it for half an hour now.", "anne_overhears_argument"), new JustText("My bell can't be heard over the noise and I have a headache.(22.06.1904 21.45)")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" looking so pretty at the ball tonight. Love you dear!")])
+				new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" why are you "), new Clue("screming at Rosie?", "georgia_rosie_argument"), new JustText("Did she break something again? You sound like a fishwife. Please stop.(22.06.1904 21.30)")])
 				], "facehistory"
 			),
-	
+			new StyledDiv([
+				new Paragraph([new JustText(")22.06.1904 21.15) Is that an argument? How am I expected to sleep if there is screming?")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new Link("Georgia Conway", "www.facespace.com/georgiac"), new JustText(" looking so pretty at the ball tonight. Love you dear!(15.06.1904 23.00)")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new JustText("(12.5.1904) Anne wrote on her brother's wall on his birthday:"),
+				new Paragraph([new JustText("Miss you brother...")])
+				], "facehistory"
+			)
 		]
 	}),
 	"www.facespace.com/georgiac" : new PutInSite("www.facespace.com", {
@@ -228,12 +257,12 @@ var Pages = {
 			new JustText("Age: 21 "),
 			new JustText("Social status: Engaged to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
 			new StyledDiv([
-				new Paragraph([new JustText("Nearly finished my painting! The folly looks so beautiful at sunset!")]),
+				new Paragraph([new JustText("(22.06.1904 21.00) Nearly finished my painting! The folly looks so beautiful at sunset!")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" Where are you? You keep disappearing! xx")]),
+				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText("(22.06.1904 18.00) Where are you? You keep disappearing! xx")]),
 				new StyledDiv([
 					new Link("Frederick Fitzcharles", "www.facespace.com/fredf"),
 					new JustText("Sorry darling, I've been busy working on a surprise. TTYL")
@@ -242,36 +271,36 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("I love my little sisters! They're so talented!")]),
+				new Paragraph([new JustText("(22.06.1904 10.30)I love my little sisters! They're so talented!")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText(" likes this.")]),
 				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this")]),
 				new Paragraph([new Link("Anna Conway", "www.facespace.com/annac"), new JustText(" likes this")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Loved Anna's singing last night! Voice of an angel!")]),
+				new Paragraph([new JustText("(21.06.1904 09.27) Loved Anna's singing last night! Voice of an angel!")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")]),
 				new Paragraph([new Link("Anna Conway", "wwww.facespace.com/annac"), new JustText(" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Painting the folly today with the new paints Daddy gave me!")]),
+				new Paragraph([new JustText("(20.06.1904 10.00) Painting the folly today with the new paints Daddy gave me!")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")]),
 				new Paragraph([new Link("George Conway", "wwww.facespace.com/georgec"), new JustText(" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Love my new necklace!!")]),
+				new Paragraph([new JustText("(19.06.1904 19.30) Love my new necklace!!")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Really looking forward to seeing my darling Freddy tonight!! xoxoxoxo")]),
+				new Paragraph([new JustText(")19.06.1904 10.00) Really looking forward to seeing my darling Freddy tonight!! xoxoxoxo")]),
 				new Paragraph([new Link("Frederick Fitzcharles", "www.facespace.com/fredf"), new JustText (" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("(14.02.1906) Georgia "), new Clue("is now engaged", "georgia_engaged_to_freddy"), 
+				new Paragraph([new JustText("(14.02.1904) Georgia "), new Clue("is now engaged", "georgia_engaged_to_freddy"), 
 				new JustText(" to "), new Link("Frederick Fitzcharles", "www.facespace.com/fredf")]),
 				new Paragraph([new Link("Jane Conway", "www.facespace.com/janec"), new JustText(" likes this.")])
 				], "facehistory"
@@ -316,15 +345,20 @@ var Pages = {
 			new JustText("Age: 20 "),
 			new JustText("Social status: Single"),
 			new StyledDiv([
-				new Paragraph([new JustText("Has anyone seen my "), new Clue("silver letter opener?", "anna_lost_knife")])
+				new Paragraph([new JustText("(22.06.1904 21.30) Teaching Harold a valuable lesson on bluffing "), new Clue("at cards!", "anna_has_alibi")]),
+				new Paragraph([new Link("Harold Conway", "www.facespace.com/haroldc"), new JustText (" likes this.")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Anyone else ever feel like they were born in the wrong time?")])
+				new Paragraph([new JustText("(22.06.1904 21.00) Has anyone seen my "), new Clue("silver letter opener?", "anna_lost_knife")])
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("She walks in beauty, like the night<br/>"),
+				new Paragraph([new JustText("(21.06.1904 23.30) Anyone else ever feel like they were born in the wrong time?")])
+				], "facehistory"
+			),
+			new StyledDiv([
+				new Paragraph([new JustText("(20.06.1904 22.30)She walks in beauty, like the night<br/>"),
 					new JustText("Of cloudless climes and starry skies;<br/>"),
 					new JustText("And all that's best of dark and bright<br/>"),
 					new JustText("Meet in her aspect and her eyes")]),
@@ -332,7 +366,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Singing scales. Need to get practice in for tonight!")])
+				new Paragraph([new JustText("(19.06.1904 15.12) Singing scales. Need to get practice in for tonight!")])
 				], "facehistory"
 			)
 		]
@@ -453,6 +487,7 @@ var Pages = {
 					new JustText(" you ok hun?")
 					], "facehistory"
 				)
+				], "facehistory"
 			),
 			new StyledDiv([
 				new Paragraph([new JustText("Didn't have enough time for breakfast and I'm really suffering for it.")])
@@ -491,7 +526,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("was i suposed 2 clean the drawin rm or the dinin rm cant rember lol")]),
+				new Paragraph([new JustText("was i suposed 2 "), new clue("clean the drawin rm", "drawing_room_not_cleaned"), new JustText("or the dinin rm cant rember lol")]),
 				new StyledDiv([
 					new Link("Mary Tallman", "www.facespace.com/maryt"),
 					new JustText(" Both. hurry it up.")
@@ -524,7 +559,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("so tired of cleanin evrythin")])
+				new Paragraph([new Clue("so tired of cleanin evrythin", "rosie_lazy")])
 				], "facehistory"
 			),
 			new StyledDiv([
