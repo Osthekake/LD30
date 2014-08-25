@@ -452,7 +452,7 @@ var Pages = {
 					new Link("Mary Tallman", "www.facespace.com/maryt"),
 					new JustText(" you ok hun?")
 					], "facehistory"
-				),
+				)
 			),
 			new StyledDiv([
 				new Paragraph([new JustText("Didn't have enough time for breakfast and I'm really suffering for it.")])
