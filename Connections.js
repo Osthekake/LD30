@@ -63,7 +63,7 @@ var Connections = {
 	},
 	"anne_has_only_daughters" : {
 		coords : [7, 2, 7, 3],
-		tooltip : "All of Annes children are girls."
+		tooltip : "All of Anne's children are girls."
 	},
 	"george_inherited_through_anne" : { 
 		coords : [7, 3, 6, 4],
@@ -187,5 +187,13 @@ var Connections = {
 	"gold_buried_under_folly" : {
 		coords : [0, 0, 0, 0],
 		tooltip : "Jacobite gold is rumoured to be buried under the folly." // red herring clue!
+	},
+	"johns_child_precedence_over_anne" : {
+		coords : [0, 0, 0, 0],
+		tooltip : "John's child would inherit the Beauly estate over Anne or her children." // relates to charles_is_heir_to_beauly
+	},
+	"charles_conceived_out_of_wedlock" : {
+		coords : [0, 0, 0, 0],
+		tooltip : "Charles was conceived before his parents got married." // relates to charles_is_johns_son
 	}
 }

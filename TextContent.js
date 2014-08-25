@@ -624,12 +624,30 @@ var Pages = {
 			new Link("?")
 		]
 	}),
+	"www.paper.com/archived/1882" : new PutInSite("www.paper.com", {
+		"article" : [
+			new Header([new JustText("Births, Marriages and Deaths")], "h2"),
+			new Header([new JustText("Date: 21.04.1882")], "h4"),
+			new JustText("It is with great pleasure that we announce the engagement of Miss Anne Beauly of Beauly House to Mr George Conway. This newspaper shared in the Beauly family's distress at the "),
+			new Clue("death of John Beauly, ", "anne_had_an_elder_brother"),
+			new JustText("known to family and friends as Jack, last year of diptheria, and we are pleased to share in the joy of this union.<br/><br/>"),
+			new JustText("Mr Conway is a business-man of some reknown, having made wise investments from his inheritance several years ago, and sources close to him say that he is keen to expand further into the Far East with "),
+			new Clue("his soon-to-be-wife's fortune, ", "george_inherited_through_anne"),
+			new JustText("who is the sole inheritor of the Beauly estate following the death of her elder brother "),
+			new Clue("without issue.", "johns_child_precedence_over_anne"),
+			new JustText(" We wish Miss Beauly and Mr Conway the best for their future lives together.<br/><br/>"),
+			new JustText("Finally, we are pleased to announce the birth of a baby boy to Mr and Mrs Edward Weatherby, married six months ago in St Ethelred's Parish Church. Mr Weatherby is known to many in the parish as the head butler at Beauly House. Charles Edward Weatherby was "),
+			new Clue("born early but is a healthy size,", "charles_conceived_out_of_wedlock"),
+			new JustText(" and both mother and baby are doing well.<br/><br/>"),
+			new Link("?")
+		]
+	}),
 	"www.paper.com/shipwreck" : new PutInSite("www.paper.com", {
 		"article" : [
 			new Header([new JustText("Ships Washed Ashore After Fierce Storm")], "h2"),
 			new Header([new JustText("Date: 11.05.1904")], "h4"),
 			new JustText("Following an unseasonable gale, several ships and small boat were found washed ashore down the coast, having been ripped away from their moorings in the night.<br/>"),
-			new JustText("All of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth.<br/>"),
+			new JustText("Conway Enterprises has ensured that all of the craft have been returned to their rightful owners, with the exception of one clipper, the SS Nostromo, which appears to have been abandoned some time ago. Anyone with any information regarding this vessel should contact the harbourmaster at Linmouth, or George Conway at Beauly House.<br/>"),
 			new MImage("img/women.jpg", 150, 250),
 			new JustText("<br/>(in the picture:) Anne Conway and "),
 			new Clue("her three daughters", "anne_has_only_daughters"),
