@@ -70,7 +70,7 @@ var Pages = {
 				new JustText("* Click on clues to build a case.<br/>"),
 				new JustText("* Click on links to navigate around, or:<br/>"),
 				new JustText("* Enter urls in the bar above.<br/>"),
-				new JustText("* Remember to read your mails.<br/>"),
+				new JustText("* The green envelope means you have mails. Click it to read your mails!<br/>"),
 				new StyledDiv([new Link("Start Game", "www.letters.com/1")], "bordered")
 			], "centered")
 		],
