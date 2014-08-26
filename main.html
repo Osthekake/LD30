@@ -14,7 +14,7 @@
     </head>
     <body style="background:black;">
     	<div id="browser" style="float:left; width: 700px;">
-    		<img id="mailicon" src="img/Mail.png" style="position:fixed; top:10; left:690;"></img>
+    		<img id="mailicon" src="img/Mail.png" style="position:fixed; top:10; left:690;"></img><img id="homeicon" src="img/home.png" width="30" height="30" style="position:fixed; top:10; left:660;"></img>
     		<div style="background:white; border-style:inset; border-width:3px; margin:10px; padding:0;">
     			<img src="img/back.png" id="back" width="30" height="30" style="position:absolute; top:15; left:15;"></img>
     			<input type="text" size="100" id="address" rows="1" style="border-style:none; padding: 0 0 0 30px; margin:0;"></input>
@@ -35,6 +35,9 @@
 	    	house.onload = function(){
 		    	ConnectionHelper.init(ctx, house);
 		    	MailBox.init(document.getElementById("mailicon"));
+		    	document.getElementById("homeicon").onclick = function(){
+		    		PageHelper.loadPage("www.scroogle.com/Beauly%20House");
+		    	};
 		    	PageHelper.init(document.getElementById("page"), document.getElementById("address"));
 		    	PageHelper.loadPage("about:game");
 		    	document.getElementById("cycle").onclick = function(){ConnectionHelper.cycleHighlight();};
