@@ -407,7 +407,7 @@ var Pages = {
 				], "facehistory"
 			),
 			new StyledDiv([
-				new Paragraph([new JustText("Why wasn't I invited to go fishing?")]),
+				new Paragraph([new JustText("(22.06.1904 15.05) Why wasn't I invited to go fishing?")]),
 				new StyledDiv([
 					new Link("Harold Conway", "www.facespace.com/haroldc"),
 					new JustText(" Cards instead?")
