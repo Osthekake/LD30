@@ -78,6 +78,7 @@ var Pages = {
 	},	
 	"www.scroogle.com/Beauly%20House" : {
 		content : [
+			new StyledDiv([new Link("Mail", "www.letters.com")], "", "float:right"),
 			new Header([new JustText("Scroogle")]),
 			new JustText("Search: "),
 			new StyledDiv([new JustText("Beauly House")], "bordered"),
